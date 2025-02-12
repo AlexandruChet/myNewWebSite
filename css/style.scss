@@ -1,0 +1,167 @@
+.container {
+	padding-top: 2vw;
+	padding-left: 5vw;
+	padding-right: 5vw;
+	padding-bottom: 2vw;
+}
+
+header {
+	background-color: rgb(37, 37, 37);
+	.menu-button {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		width: 30px;
+		height: 22px;
+		background: transparent;
+		border: none;
+		cursor: pointer;
+		position: relative;
+		margin-top: 1.5vw;
+
+		.bar {
+			display: block;
+			width: 3vw;
+			height: 0.3vw;
+			border-radius: 5px;
+			background-color: white;
+			transition: all 0.3s ease;
+		}
+
+		&.open-birger-menu {
+			.bar {
+				background-color: #757575;
+
+				&:nth-child(1) {
+					transform: rotate(50deg) translateY(14px);
+				}
+
+				&:nth-child(2) {
+					display: none;
+				}
+
+				&:nth-child(3) {
+					transform: rotate(-50deg) translateY(-14px);
+				}
+			}
+		}
+
+		&:hover .bar {
+			background-color: #555;
+		}
+	}
+	.header-main {
+		display: flex;
+		.navigation {
+			gap: 3vw;
+			display: flex;
+			.header-icons {
+				font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+					sans-serif;
+				display: flex;
+				padding-left: 5vw;
+				color: white;
+				gap: 3vw;
+				.logo {
+					padding-top: 2vw;
+					font-size: 2rem;
+				}
+			}
+			.nav-list {
+				font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+					'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+				display: flex;
+				padding-top: 2vw;
+				font-size: 1.5rem;
+				gap: 2vw;
+				.nav-item:hover {
+					color: red;
+				}
+			}
+			.nav-info {
+				padding-top: 2vw;
+				display: flex;
+				border: 1vw;
+				.nav-title {
+					font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+						sans-serif;
+					margin-left: 3vw;
+					font-size: 1.5rem;
+					color: white;
+				}
+			}
+		}
+	}
+}
+
+.section-about-me {
+	background-color: #b3a0ff;
+	padding-top: 5vw;
+	padding-bottom: 5vw;
+	.about-content {
+		gap: 3vw;
+		display: flex;
+		img {
+			align-items: center;
+			justify-content: center;
+		}
+		h3 {
+			margin-top: 5vw;
+			font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+				sans-serif;
+			color: white;
+			font-size: 4vw;
+		}
+	}
+	.input-container{
+		background-color: rgb(37, 37, 37);
+		border-radius: 5vw;
+		text-align: center;
+		.input-about-me{
+			height: 25px;
+			text-align: center;
+			margin-top: 2vw;
+			margin-bottom: 2vw;
+			margin-left: 2.5vw;
+			border-radius: 3vw;
+			border: none;
+		}
+		.label-content{
+			font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+			font-size: 1.5vw;
+			color: #757575;
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	header {
+		.header-main {
+			.navigation {
+				justify-content: center;
+				flex-direction: column;
+				align-items: center;
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	header {
+		.header-main {
+			display: block;
+			.navigation {
+				display: none;
+				flex-direction: column;
+				align-items: center;
+				.header-icons {
+					.logo {
+						margin-top: 2vw;
+						font-size: 1.3rem;
+					}
+				}
+			}
+		}
+	}
+}

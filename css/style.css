@@ -1,1 +1,146 @@
-/*# sourceMappingURL=style.css.map */
+.container {
+  padding-top: 2vw;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-bottom: 2vw;
+}
+
+header {
+  background-color: rgb(37, 37, 37);
+}
+header .menu-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 30px;
+  height: 22px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  margin-top: 1.5vw;
+}
+header .menu-button .bar {
+  display: block;
+  width: 3vw;
+  height: 0.3vw;
+  border-radius: 5px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+header .menu-button.open-birger-menu .bar {
+  background-color: #757575;
+}
+header .menu-button.open-birger-menu .bar:nth-child(1) {
+  transform: rotate(50deg) translateY(14px);
+}
+header .menu-button.open-birger-menu .bar:nth-child(2) {
+  display: none;
+}
+header .menu-button.open-birger-menu .bar:nth-child(3) {
+  transform: rotate(-50deg) translateY(-14px);
+}
+header .menu-button:hover .bar {
+  background-color: #555;
+}
+header .header-main {
+  display: flex;
+}
+header .header-main .navigation {
+  gap: 3vw;
+  display: flex;
+}
+header .header-main .navigation .header-icons {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  display: flex;
+  padding-left: 5vw;
+  color: white;
+  gap: 3vw;
+}
+header .header-main .navigation .header-icons .logo {
+  padding-top: 2vw;
+  font-size: 2rem;
+}
+header .header-main .navigation .nav-list {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  display: flex;
+  padding-top: 2vw;
+  font-size: 1.5rem;
+  gap: 2vw;
+}
+header .header-main .navigation .nav-list .nav-item:hover {
+  color: red;
+}
+header .header-main .navigation .nav-info {
+  padding-top: 2vw;
+  display: flex;
+  border: 1vw;
+}
+header .header-main .navigation .nav-info .nav-title {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin-left: 3vw;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.section-about-me {
+  background-color: #b3a0ff;
+  padding-top: 5vw;
+  padding-bottom: 5vw;
+}
+.section-about-me .about-content {
+  gap: 3vw;
+  display: flex;
+}
+.section-about-me .about-content img {
+  align-items: center;
+  justify-content: center;
+}
+.section-about-me .about-content h3 {
+  margin-top: 5vw;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: white;
+  font-size: 4vw;
+}
+.section-about-me .input-container {
+  background-color: rgb(37, 37, 37);
+  border-radius: 5vw;
+  text-align: center;
+}
+.section-about-me .input-container .input-about-me {
+  height: 25px;
+  text-align: center;
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+  margin-left: 2.5vw;
+  border-radius: 3vw;
+  border: none;
+}
+.section-about-me .input-container .label-content {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.5vw;
+  color: #757575;
+}
+
+@media (max-width: 1024px) {
+  header .header-main .navigation {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 768px) {
+  header .header-main {
+    display: block;
+  }
+  header .header-main .navigation {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+  }
+  header .header-main .navigation .header-icons .logo {
+    margin-top: 2vw;
+    font-size: 1.3rem;
+  }
+}/*# sourceMappingURL=style.css.map */
