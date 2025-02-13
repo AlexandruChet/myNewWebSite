@@ -58,3 +58,14 @@ heightUserInput.addEventListener('input', () => {
 weightUserInput.addEventListener('input', () => {
 	firstUserWeight.textContent = weightUserInput.value
 })
+
+const btnOpenP = document.getElementById('btnOpenP')
+const openTextRegulations = document.getElementById('openText')
+
+btnOpenP.addEventListener('click', () => {
+	if (openTextRegulations.style.display === 'none') {
+		openTextRegulations.style.display = 'block'
+	} else {
+		openTextRegulations.style.display = 'none'
+	}
+})
