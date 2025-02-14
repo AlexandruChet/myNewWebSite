@@ -56,11 +56,146 @@ btnOpenP.addEventListener('click', () => {
 })
 const btnOpenResult = document.getElementById('btn_open')
 const innerText = document.getElementById('open-text')
+const cardContainerContent = document.querySelector('.card-container')
+
+function functionWeightLoss() {
+	const traning = [
+		{
+			name: `Планка`,
+			description: `Статична вправа для зміцнення преса, спини та плечей. Виконуйте 30-60 секунд.`,
+			img: `images/logo.svg`,
+		},
+		{
+			name: `Берпі`,
+			description: `Інтенсивна вправа для спалювання калорій і тренування всього тіла. Виконуйте 10-15 разів.`,
+			img: `images/logo.svg`,
+		},
+		{
+			name: `Скручування`,
+			description: `Класична вправа для преса. Виконуйте 20-25 повторів.`,
+			img: `images/logo.svg`,
+		},
+		{
+			name: `Присідання`,
+			description: `Вправа для м'язів ніг та сідниць. Виконуйте 15-20 повторів.`,
+			img: `images/logo.svg`,
+		},
+		{
+			name: `Випади`,
+			description: `Вправа для зміцнення ніг і сідниць. Виконуйте 10-15 разів на кожну ногу.`,
+			img: `images/logo.svg`,
+		},
+		{
+			name: `Віджимання`,
+			description: `Вправа для грудних м'язів, трицепсів і плечей. Виконуйте 15-20 разів.`,
+			img: `images/logo.svg`,
+		},
+		{
+			name: `Скакалка`,
+			description: `Кардіо-вправа для спалювання калорій. Стрибати 1-2 хвилини.`,
+			img: `images/logo.svg`,
+		},
+		{
+			name: `Місток`,
+			description: `Вправа для сідниць і нижньої частини спини. Виконуйте 20-25 разів.`,
+			img: `images/logo.svg`,
+		},
+		{
+			name: `Альпініст`,
+			description: `Динамічна вправа для преса і кардіо. Виконуйте 30-45 секунд.`,
+			img: `images/logo.svg`,
+		},
+		{
+			name: `Бічна планка`,
+			description: `Вправа для косих м'язів живота. Виконуйте по 30-45 секунд на кожну сторону.`,
+			img: `images/logo.svg`,
+		},
+	]
+	let cardsHTML = ''
+	traning.forEach((element) => {
+		cardsHTML += `
+    <div class="card">
+      <img src="${element.img}" alt="${element.name}">
+      <h3>${element.name}</h3>
+      <p>${element.description}</p>
+      <button class="btn-delete">Я виконав ці вправи</button>
+    </div>`
+
+		cardContainerContent.innerHTML = cardsHTML
+	})
+}
+
+function functionMuscle() {
+	const muscleTraining = [
+		{
+			name: `Присідання з вагою`,
+			description: `Базова силова вправа для м'язів ніг, сідниць і корпусу. Виконуйте 8-12 повторів з гантелями або штангою.`,
+			img: `/images/logo.svg`,
+		},
+		{
+			name: `Жим гантелей лежачи`,
+			description: `Ефективна вправа для нарощування грудних м'язів і трицепсів. Зробіть 8-10 повторів з помірною вагою.`,
+			img: `/images/logo.svg`,
+		},
+		{
+			name: `Тяга гантелі до поясу`,
+			description: `Відмінна вправа для зміцнення спини та біцепсів. Виконуйте 8-12 повторів на кожну руку.`,
+			img: `/images/logo.svg`,
+		},
+		{
+			name: `Віджимання на брусах`,
+			description: `Розвиває грудні м'язи, плечі і трицепси. Виконуйте 6-10 повторів з додатковою вагою, якщо можливо.`,
+			img: `/images/logo.svg`,
+		},
+		{
+			name: `Румунська станова тяга`,
+			description: `Вправа для біцепсів стегна, сідниць і спини. Зробіть 8-12 повторів з гантелями або штангою.`,
+			img: `/images/logo.svg`,
+		},
+		{
+			name: `Підтягування широким хватом`,
+			description: `Розвиває спину, біцепси та плечі. Виконуйте 5-10 повторів, додаючи вагу при необхідності.`,
+			img: `/images/logo.svg`,
+		},
+		{
+			name: `Жим плечима гантелей`,
+			description: `Вправа для дельтоподібних м'язів. Зробіть 10-12 повторів з помірною вагою.`,
+			img: `/images/logo.svg`,
+		},
+		{
+			name: `Підйом на біцепс`,
+			description: `Класична вправа для біцепсів. Виконуйте 8-12 повторів з гантелями або штангою.`,
+			img: `/images/logo.svg`,
+		},
+		{
+			name: `Французький жим`,
+			description: `Ізольована вправа для трицепсів. Зробіть 8-12 повторів з гантелею або штангою EZ.`,
+			img: `/images/logo.svg`,
+		},
+		{
+			name: `Планка з вагою`,
+			description: `Зміцнює корпус і м'язи стабілізатори. Тримайте 30-60 секунд з додатковою вагою на спині.`,
+			img: `/images/logo.svg`,
+		},
+	]
+	let cardsHTML = ''
+	muscleTraining.forEach((element) => {
+		cardsHTML += `
+    <div class="card">
+      <img src="${element.img}" alt="${element.name}">
+      <h3>${element.name}</h3>
+      <p>${element.description}</p>
+      <button class="btn-delete">Я виконав ці вправи</button>
+    </div>`
+		cardContainerContent.innerHTML = cardsHTML
+	})
+}
 
 btnOpenResult.addEventListener('click', () => {
 	const height = parseFloat(heightUserInput.value)
 	const weight = parseFloat(weightUserInput.value)
 	const idealWeight = height - 110
+	let resultBody
 	if (innerText.style.display === 'none') {
 		innerText.style.display = 'block'
 	} else {
@@ -69,77 +204,14 @@ btnOpenResult.addEventListener('click', () => {
 
 	if (weight === idealWeight) {
 		innerText.textContent = 'Ваша вага ідеальна'
+		resultBody = 'ideal'
 	} else if (weight < idealWeight) {
 		innerText.textContent = 'Ви занадто худий'
-	} else {
+		resultBody = 'Вправи на нарощення мускул'
+		functionMuscle()
+	} else if (weight > idealWeight) {
 		innerText.textContent = 'Вам було би непогано схуднути'
+		resultBody = 'Вправи на похудання'
+		functionWeightLoss()
 	}
 })
-
-const cardContainerContent = document.querySelector('.card-container')
-
-const traning = [
-	{
-		name: `Планка`,
-		description: `Статична вправа для зміцнення преса, спини та плечей. Виконуйте 30-60 секунд.`,
-		img: `images/logo.svg`,
-	},
-	{
-		name: `Берпі`,
-		description: `Інтенсивна вправа для спалювання калорій і тренування всього тіла. Виконуйте 10-15 разів.`,
-		img: `images/logo.svg`,
-	},
-	{
-		name: `Скручування`,
-		description: `Класична вправа для преса. Виконуйте 20-25 повторів.`,
-		img: `images/logo.svg`,
-	},
-	{
-		name: `Присідання`,
-		description: `Вправа для м'язів ніг та сідниць. Виконуйте 15-20 повторів.`,
-		img: `images/logo.svg`,
-	},
-	{
-		name: `Випади`,
-		description: `Вправа для зміцнення ніг і сідниць. Виконуйте 10-15 разів на кожну ногу.`,
-		img: `images/logo.svg`,
-	},
-	{
-		name: `Віджимання`,
-		description: `Вправа для грудних м'язів, трицепсів і плечей. Виконуйте 15-20 разів.`,
-		img: `images/logo.svg`,
-	},
-	{
-		name: `Скакалка`,
-		description: `Кардіо-вправа для спалювання калорій. Стрибати 1-2 хвилини.`,
-		img: `images/logo.svg`,
-	},
-	{
-		name: `Місток`,
-		description: `Вправа для сідниць і нижньої частини спини. Виконуйте 20-25 разів.`,
-		img: `images/logo.svg`,
-	},
-	{
-		name: `Альпініст`,
-		description: `Динамічна вправа для преса і кардіо. Виконуйте 30-45 секунд.`,
-		img: `images/logo.svg`,
-	},
-	{
-		name: `Бічна планка`,
-		description: `Вправа для косих м'язів живота. Виконуйте по 30-45 секунд на кожну сторону.`,
-		img: `images/logo.svg`,
-	},
-]
-
-let cardsHTML = ''
-traning.forEach((element) => {
-	cardsHTML += `
-    <div class="card">
-      <img src="${element.img}" alt="${element.name}">
-      <h3>${element.name}</h3>
-      <p>${element.description}</p>
-      <button class="btn-delete">Я виконав ці вправи</button>
-    </div>`
-})
-
-cardContainerContent.innerHTML = cardsHTML
