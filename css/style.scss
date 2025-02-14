@@ -5,6 +5,16 @@
 	padding-bottom: 2vw;
 }
 
+.bg-image {
+	height: 25vw;
+	width: 100%;
+	background: url(https://images.fitnessintl.com/images/CMS/LAF/Amenities/blogimage.jpg);
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
 header {
 	background-color: rgb(37, 37, 37);
 	.menu-button {
@@ -213,6 +223,62 @@ header {
 				border: 1px solid #ddd;
 				border-radius: 5px;
 			}
+		}
+	}
+}
+
+.title-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient(to right, #ff8c00, #ff0080);
+	padding: 20px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	padding-bottom: 5%;
+	.title-text {
+		text-align: center;
+		background: #fff;
+		padding: 30px;
+		border-radius: 15px;
+		box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+		max-width: 600px;
+		width: 100%;
+		.title_section {
+			font-size: 32px;
+			color: #222;
+			margin-bottom: 10px;
+		}
+
+		.headline_title {
+			font-size: 24px;
+			color: #444;
+			margin-bottom: 15px;
+		}
+		.btn_text-open {
+			&:hover {
+				background: #d6006e;
+			}
+			padding: 10px 20px;
+			font-size: 16px;
+			color: #fff;
+			background: #ff0080;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			transition: background 0.3s ease;
+		}
+		.open_text {
+			display: none;
+			font-size: 1rem;
+			line-height: 1.6;
+			color: #333;
+			max-width: 100%;
+			white-space: pre-wrap;
+			overflow-wrap: break-word;
+			padding: 10px;
+			background-color: #f9f9f9;
+			border: 1px solid #ddd;
+			border-radius: 5px;
 		}
 	}
 }

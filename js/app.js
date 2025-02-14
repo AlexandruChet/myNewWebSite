@@ -22,42 +22,27 @@ const genderUser = document.getElementById('genderUser')
 const heightUser = document.getElementById('heightUser')
 const weightUser = document.getElementById('weightUser')
 
-userNameInput.addEventListener('input', () => {
-	userName.textContent = userNameInput.value
-})
-
-genderUserInput.addEventListener('input', () => {
-	genderUser.textContent = genderUserInput.value
-})
-
-heightUserInput.addEventListener('input', () => {
-	heightUser.textContent = heightUserInput.value
-})
-
-weightUserInput.addEventListener('input', () => {
-	weightUser.textContent = weightUserInput.value
-})
-
 const firstUserName = document.getElementById('firstUserName')
 const firstUserGender = document.getElementById('firstUserGender')
 const firstUserHeight = document.getElementById('firstUserHeight')
 const firstUserWeight = document.getElementById('firstUserWeight')
 
-userNameInput.addEventListener('input', () => {
-	firstUserName.textContent = userNameInput.value
-})
+function pluseText(element, text) {
+	element.addEventListener('input', () => {
+		text.textContent = element.value
+        console.log(text);
+	})
+}
 
-genderUserInput.addEventListener('input', () => {
-	firstUserGender.textContent = genderUserInput.value
-})
+pluseText(userNameInput, userName)
+pluseText(genderUserInput, genderUser)
+pluseText(heightUserInput, heightUser)
+pluseText(weightUserInput, weightUser)
 
-heightUserInput.addEventListener('input', () => {
-	firstUserHeight.textContent = heightUserInput.value
-})
-
-weightUserInput.addEventListener('input', () => {
-	firstUserWeight.textContent = weightUserInput.value
-})
+pluseText(userNameInput, firstUserName)
+pluseText(genderUserInput, firstUserGender)
+pluseText(heightUserInput, firstUserHeight)
+pluseText(weightUserInput, firstUserWeight)
 
 const btnOpenP = document.getElementById('btnOpenP')
 const openTextRegulations = document.getElementById('openText')
@@ -69,3 +54,25 @@ btnOpenP.addEventListener('click', () => {
 		openTextRegulations.style.display = 'none'
 	}
 })
+const btnOpenResult = document.getElementById('btn_open')
+const innerText = document.getElementById('open-text')
+
+btnOpenResult.addEventListener('click', () => {
+	const height = parseFloat(heightUserInput.value)
+	const weight = parseFloat(weightUserInput.value)
+	const idealWeight = height - 110
+	if (innerText.style.display === 'none') {
+		innerText.style.display = 'block'
+	} else {
+		innerText.style.display = 'none'
+	}
+
+	if (weight === idealWeight) {
+		innerText.textContent = 'Ваша вага ідеальна'
+	} else if (weight < idealWeight) {
+		innerText.textContent = 'Ви занадто худий'
+	} else {
+		innerText.textContent = 'Вам було би непогано схуднути'
+	}
+})
+
