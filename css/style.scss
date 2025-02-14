@@ -283,6 +283,75 @@ header {
 	}
 }
 
+.card-container {
+	padding-top: 5vw;
+	padding-bottom: 5vw;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	background: url(https://www.hdwallpapers.in/download/bird_goose_on_water_4k_hd_birds-1366x768.jpg);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	object-fit: cover;
+	display: flex;
+	flex-wrap: wrap;
+	.card {
+		width: 20rem;
+		background: $newhelldark;
+		border-radius: 1rem;
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+		overflow: hidden;
+		text-align: center;
+		transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+
+		&:hover {
+			transform: translateY(-10px);
+			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+		}
+
+		img {
+			width: 100%;
+			height: 10rem;
+			object-fit: cover;
+			border-radius: 1rem 1rem 0 0;
+			transition: opacity 0.3s ease;
+		}
+
+		&:hover img {
+			opacity: 0.8;
+		}
+
+		h3 {
+			margin: 0.7rem 0;
+			font-size: 1.6rem;
+			color: $white;
+			text-transform: uppercase;
+			font-weight: bold;
+		}
+
+		p {
+			font-size: 1.2rem;
+			color: $gray;
+			margin-bottom: 1.5rem;
+		}
+
+		button {
+			background-color: $primary;
+			color: $white;
+			border: none;
+			padding: 1rem;
+			width: 100%;
+			cursor: pointer;
+			border-radius: 0.5rem;
+			transition: background-color 0.3s ease, transform 0.3s ease;
+
+			&:hover {
+				background: $hoverPrimary;
+				transform: scale(1.05);
+			}
+		}
+	}
+}
+
 @media (max-width: 768px) {
 	header {
 		.header-main {

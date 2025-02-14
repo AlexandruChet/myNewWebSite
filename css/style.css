@@ -1,278 +1,352 @@
 .container {
-  padding-top: 2vw;
-  padding-left: 5vw;
-  padding-right: 5vw;
-  padding-bottom: 2vw;
+	padding-top: 2vw;
+	padding-left: 5vw;
+	padding-right: 5vw;
+	padding-bottom: 2vw;
 }
 
 .bg-image {
-  height: 25vw;
-  width: 100%;
-  background: url(https://images.fitnessintl.com/images/CMS/LAF/Amenities/blogimage.jpg);
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+	height: 25vw;
+	width: 100%;
+	background: url(https://images.fitnessintl.com/images/CMS/LAF/Amenities/blogimage.jpg);
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 header {
-  background-color: rgb(37, 37, 37);
+	background-color: rgb(37, 37, 37);
 }
 header .menu-button {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  width: 30px;
-  height: 22px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  position: relative;
-  margin-top: 1.5vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	width: 30px;
+	height: 22px;
+	background: transparent;
+	border: none;
+	cursor: pointer;
+	position: relative;
+	margin-top: 1.5vw;
 }
 header .menu-button .bar {
-  display: block;
-  width: 3vw;
-  height: 0.3vw;
-  border-radius: 5px;
-  background-color: white;
-  transition: all 0.3s ease;
+	display: block;
+	width: 3vw;
+	height: 0.3vw;
+	border-radius: 5px;
+	background-color: white;
+	transition: all 0.3s ease;
 }
 header .menu-button.open-birger-menu .bar {
-  background-color: #757575;
+	background-color: #757575;
 }
 header .menu-button.open-birger-menu .bar:nth-child(1) {
-  transform: rotate(50deg) translateY(14px);
+	transform: rotate(50deg) translateY(14px);
 }
 header .menu-button.open-birger-menu .bar:nth-child(2) {
-  display: none;
+	display: none;
 }
 header .menu-button.open-birger-menu .bar:nth-child(3) {
-  transform: rotate(-50deg) translateY(-14px);
+	transform: rotate(-50deg) translateY(-14px);
 }
 header .menu-button:hover .bar {
-  background-color: #555;
+	background-color: #555;
 }
 header .header-main {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1vw;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1vw;
 }
 header .header-main .navigation {
-  gap: 1vw;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+	gap: 1vw;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
 }
 header .header-main .navigation .header-icons {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  display: flex;
-  align-items: center;
-  padding-left: 5vw;
-  color: white;
-  gap: 3vw;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	display: flex;
+	align-items: center;
+	padding-left: 5vw;
+	color: white;
+	gap: 3vw;
 }
 header .header-main .navigation .header-icons .logo {
-  padding-top: 2vw;
-  font-size: 2rem;
+	padding-top: 2vw;
+	font-size: 2rem;
 }
 header .header-main .navigation .nav-list {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  display: flex;
-  flex-wrap: wrap;
-  padding-top: 2vw;
-  font-size: 1.5rem;
-  gap: 2vw;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+		'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	display: flex;
+	flex-wrap: wrap;
+	padding-top: 2vw;
+	font-size: 1.5rem;
+	gap: 2vw;
 }
 header .header-main .navigation .nav-list .nav-item:hover {
-  color: red;
+	color: red;
 }
 header .header-main .navigation .nav-info {
-  padding-top: 2vw;
-  display: flex;
-  flex-wrap: wrap;
-  border: 1vw;
+	padding-top: 2vw;
+	display: flex;
+	flex-wrap: wrap;
+	border: 1vw;
 }
 header .header-main .navigation .nav-info .nav-title {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  margin-left: 1vw;
-  font-size: 1.5rem;
-  color: white;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	margin-left: 1vw;
+	font-size: 1.5rem;
+	color: white;
 }
 
 .section-about-me {
-  background-color: #b3a0ff;
-  padding-top: 5vw;
-  padding-bottom: 5vw;
+	background-color: #b3a0ff;
+	padding-top: 5vw;
+	padding-bottom: 5vw;
 }
 .section-about-me .about-content {
-  gap: 3vw;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+	gap: 3vw;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
 }
 .section-about-me .about-content img {
-  align-items: center;
-  justify-content: center;
+	align-items: center;
+	justify-content: center;
 }
 .section-about-me .about-content h3 {
-  margin-top: 5vw;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  color: white;
-  font-size: 4vw;
+	margin-top: 5vw;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	color: white;
+	font-size: 4vw;
 }
 .section-about-me .input-container {
-  background-color: rgb(37, 37, 37);
-  border-radius: 5vw;
-  text-align: center;
+	background-color: rgb(37, 37, 37);
+	border-radius: 5vw;
+	text-align: center;
 }
 .section-about-me .input-container form .input-about-me {
-  height: 25px;
-  text-align: center;
-  margin-top: 2vw;
-  margin-bottom: 1vw;
-  margin-left: 2.5vw;
-  border-radius: 3vw;
-  border: none;
+	height: 25px;
+	text-align: center;
+	margin-top: 2vw;
+	margin-bottom: 1vw;
+	margin-left: 2.5vw;
+	border-radius: 3vw;
+	border: none;
 }
 .section-about-me .input-container form .label-content {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: 1.5vw;
-  color: #757575;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	font-size: 1.5vw;
+	color: #757575;
 }
 .section-about-me .input-container .regulations {
-  display: flex;
+	display: flex;
 }
 .section-about-me .input-container .regulations button {
-  align-items: center;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  background-color: #3eb2fd;
-  background-image: linear-gradient(1deg, #4f58fd, #149bf3 99%);
-  background-size: calc(100% + 20px) calc(100% + 20px);
-  border-radius: 100px;
-  border-width: 0;
-  box-shadow: none;
-  box-sizing: border-box;
-  color: #ffffff;
-  cursor: pointer;
-  display: inline-flex;
-  font-family: CircularStd, sans-serif;
-  font-size: 1rem;
-  height: auto;
-  justify-content: center;
-  line-height: 1.5;
-  padding: 6px 20px;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-  transition: background-color 0.2s, background-position 0.2s;
-  -moz-user-select: none;
-       user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  vertical-align: top;
-  white-space: nowrap;
-  margin-bottom: 2vw;
-  margin-left: 5vw;
+	align-items: center;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background-color: #3eb2fd;
+	background-image: linear-gradient(1deg, #4f58fd, #149bf3 99%);
+	background-size: calc(100% + 20px) calc(100% + 20px);
+	border-radius: 100px;
+	border-width: 0;
+	box-shadow: none;
+	box-sizing: border-box;
+	color: #ffffff;
+	cursor: pointer;
+	display: inline-flex;
+	font-family: CircularStd, sans-serif;
+	font-size: 1rem;
+	height: auto;
+	justify-content: center;
+	line-height: 1.5;
+	padding: 6px 20px;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	transition: background-color 0.2s, background-position 0.2s;
+	-moz-user-select: none;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+	vertical-align: top;
+	white-space: nowrap;
+	margin-bottom: 2vw;
+	margin-left: 5vw;
 }
 .section-about-me .input-container .regulations button:active,
 .section-about-me .input-container .regulations button:focus {
-  outline: none;
+	outline: none;
 }
 .section-about-me .input-container .regulations button:hover {
-  background-position: -20px -20px;
+	background-position: -20px -20px;
 }
 .section-about-me .input-container .regulations button:focus:not(:active) {
-  box-shadow: rgba(40, 170, 255, 0.25) 0 0 0 0.125em;
+	box-shadow: rgba(40, 170, 255, 0.25) 0 0 0 0.125em;
 }
 .section-about-me .input-container .regulations p {
-  font-family: CircularStd, sans-serif;
-  display: none;
-  margin-left: 1vw;
-  margin-bottom: 2vw;
-  font-size: 2vw;
-  line-height: 1.6;
-  color: #333;
-  width: 70%;
-  overflow-wrap: break-word;
-  padding: 10px;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+	font-family: CircularStd, sans-serif;
+	display: none;
+	margin-left: 1vw;
+	margin-bottom: 2vw;
+	font-size: 2vw;
+	line-height: 1.6;
+	color: #333;
+	width: 70%;
+	overflow-wrap: break-word;
+	padding: 10px;
+	background-color: #f9f9f9;
+	border: 1px solid #ddd;
+	border-radius: 5px;
 }
 
 .title-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(to right, #ff8c00, #ff0080);
-  padding: 20px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  padding-bottom: 5%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient(to right, #ff8c00, #ff0080);
+	padding: 20px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	padding-bottom: 5%;
 }
 .title-container .title-text {
-  text-align: center;
-  background: #fff;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
-  max-width: 600px;
-  width: 100%;
+	text-align: center;
+	background: #fff;
+	padding: 30px;
+	border-radius: 15px;
+	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+	max-width: 600px;
+	width: 100%;
 }
 .title-container .title-text .title_section {
-  font-size: 32px;
-  color: #222;
-  margin-bottom: 10px;
+	font-size: 32px;
+	color: #222;
+	margin-bottom: 10px;
 }
 .title-container .title-text .headline_title {
-  font-size: 24px;
-  color: #444;
-  margin-bottom: 15px;
+	font-size: 24px;
+	color: #444;
+	margin-bottom: 15px;
 }
 .title-container .title-text .btn_text-open {
-  padding: 10px 20px;
-  font-size: 16px;
-  color: #fff;
-  background: #ff0080;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s ease;
+	padding: 10px 20px;
+	font-size: 16px;
+	color: #fff;
+	background: #ff0080;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background 0.3s ease;
 }
 .title-container .title-text .btn_text-open:hover {
-  background: #d6006e;
+	background: #d6006e;
 }
 .title-container .title-text .open_text {
-  display: none;
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #333;
-  max-width: 100%;
-  white-space: pre-wrap;
-  overflow-wrap: break-word;
-  padding: 10px;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+	display: none;
+	font-size: 1rem;
+	line-height: 1.6;
+	color: #333;
+	max-width: 100%;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+	padding: 10px;
+	background-color: #f9f9f9;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+}
+
+.card-container {
+	padding-top: 5vw;
+	padding-bottom: 5vw;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	background: url(https://www.hdwallpapers.in/download/bird_goose_on_water_4k_hd_birds-1366x768.jpg);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	object-fit: cover;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.card {
+	width: 30vw;
+  margin-left: 5vw;
+  margin-top: 1vw;
+	background: #1a1a1a;
+	border-radius: 1rem;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+	overflow: hidden;
+	text-align: center;
+  justify-content: center;
+	transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+.card:hover {
+	transform: translateY(-10px);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+	width: 100%;
+	height: 10rem;
+	object-fit: cover;
+	border-radius: 1rem 1rem 0 0;
+	transition: opacity 0.3s ease;
+}
+
+.card:hover img {
+	opacity: 0.8;
+}
+
+.card h3 {
+	margin: 0.7rem 0;
+	font-size: 1.6rem;
+	color: #ffffff;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.card p {
+	font-size: 1.2rem;
+	color: #888888;
+	margin-bottom: 1.5rem;
+}
+
+.card button {
+	background-color: #007bff;
+	color: #ffffff;
+	border: none;
+	padding: 1rem;
+	width: 100%;
+	cursor: pointer;
+	border-radius: 0.5rem;
+	transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.card button:hover {
+	background: #0056b3;
+	transform: scale(1.05);
 }
 
 @media (max-width: 768px) {
-  header .header-main {
-    display: block;
-  }
-  header .header-main .navigation {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-  }
-  header .header-main .navigation .header-icons .logo {
-    margin-top: 2vw;
-    font-size: 1.3rem;
-  }
-}/*# sourceMappingURL=style.css.map */
+	header .header-main {
+		display: block;
+	}
+	header .header-main .navigation {
+		display: none;
+		flex-direction: column;
+		align-items: center;
+	}
+	header .header-main .navigation .header-icons .logo {
+		margin-top: 2vw;
+		font-size: 1.3rem;
+	}
+} /*# sourceMappingURL=style.css.map */

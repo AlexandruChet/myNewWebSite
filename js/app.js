@@ -30,7 +30,7 @@ const firstUserWeight = document.getElementById('firstUserWeight')
 function pluseText(element, text) {
 	element.addEventListener('input', () => {
 		text.textContent = element.value
-        console.log(text);
+		console.log(text)
 	})
 }
 
@@ -76,3 +76,70 @@ btnOpenResult.addEventListener('click', () => {
 	}
 })
 
+const cardContainerContent = document.querySelector('.card-container')
+
+const traning = [
+	{
+		name: `Планка`,
+		description: `Статична вправа для зміцнення преса, спини та плечей. Виконуйте 30-60 секунд.`,
+		img: `images/logo.svg`,
+	},
+	{
+		name: `Берпі`,
+		description: `Інтенсивна вправа для спалювання калорій і тренування всього тіла. Виконуйте 10-15 разів.`,
+		img: `images/logo.svg`,
+	},
+	{
+		name: `Скручування`,
+		description: `Класична вправа для преса. Виконуйте 20-25 повторів.`,
+		img: `images/logo.svg`,
+	},
+	{
+		name: `Присідання`,
+		description: `Вправа для м'язів ніг та сідниць. Виконуйте 15-20 повторів.`,
+		img: `images/logo.svg`,
+	},
+	{
+		name: `Випади`,
+		description: `Вправа для зміцнення ніг і сідниць. Виконуйте 10-15 разів на кожну ногу.`,
+		img: `images/logo.svg`,
+	},
+	{
+		name: `Віджимання`,
+		description: `Вправа для грудних м'язів, трицепсів і плечей. Виконуйте 15-20 разів.`,
+		img: `images/logo.svg`,
+	},
+	{
+		name: `Скакалка`,
+		description: `Кардіо-вправа для спалювання калорій. Стрибати 1-2 хвилини.`,
+		img: `images/logo.svg`,
+	},
+	{
+		name: `Місток`,
+		description: `Вправа для сідниць і нижньої частини спини. Виконуйте 20-25 разів.`,
+		img: `images/logo.svg`,
+	},
+	{
+		name: `Альпініст`,
+		description: `Динамічна вправа для преса і кардіо. Виконуйте 30-45 секунд.`,
+		img: `images/logo.svg`,
+	},
+	{
+		name: `Бічна планка`,
+		description: `Вправа для косих м'язів живота. Виконуйте по 30-45 секунд на кожну сторону.`,
+		img: `images/logo.svg`,
+	},
+]
+
+let cardsHTML = ''
+traning.forEach((element) => {
+	cardsHTML += `
+    <div class="card">
+      <img src="${element.img}" alt="${element.name}">
+      <h3>${element.name}</h3>
+      <p>${element.description}</p>
+      <button class="btn-delete">Я виконав ці вправи</button>
+    </div>`
+})
+
+cardContainerContent.innerHTML = cardsHTML
