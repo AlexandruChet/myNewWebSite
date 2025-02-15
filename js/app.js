@@ -59,61 +59,221 @@ const innerText = document.getElementById('open-text')
 const cardContainerContent = document.querySelector('.card-container')
 const eatContainer = document.getElementById('eat-container')
 
-function functionWeightLoss() {
-	const traning = [
-		{
-			name: `Планка`,
-			description: `Статична вправа для зміцнення преса, спини та плечей. Виконуйте 30-60 секунд.`,
-			img: `images/logo.svg`,
-		},
-		{
-			name: `Берпі`,
-			description: `Інтенсивна вправа для спалювання калорій і тренування всього тіла. Виконуйте 10-15 разів.`,
-			img: `images/logo.svg`,
-		},
-		{
-			name: `Скручування`,
-			description: `Класична вправа для преса. Виконуйте 20-25 повторів.`,
-			img: `images/logo.svg`,
-		},
-		{
-			name: `Присідання`,
-			description: `Вправа для м'язів ніг та сідниць. Виконуйте 15-20 повторів.`,
-			img: `images/logo.svg`,
-		},
-		{
-			name: `Випади`,
-			description: `Вправа для зміцнення ніг і сідниць. Виконуйте 10-15 разів на кожну ногу.`,
-			img: `images/logo.svg`,
-		},
-		{
-			name: `Віджимання`,
-			description: `Вправа для грудних м'язів, трицепсів і плечей. Виконуйте 15-20 разів.`,
-			img: `images/logo.svg`,
-		},
-		{
-			name: `Скакалка`,
-			description: `Кардіо-вправа для спалювання калорій. Стрибати 1-2 хвилини.`,
-			img: `images/logo.svg`,
-		},
-		{
-			name: `Місток`,
-			description: `Вправа для сідниць і нижньої частини спини. Виконуйте 20-25 разів.`,
-			img: `images/logo.svg`,
-		},
-		{
-			name: `Альпініст`,
-			description: `Динамічна вправа для преса і кардіо. Виконуйте 30-45 секунд.`,
-			img: `images/logo.svg`,
-		},
-		{
-			name: `Бічна планка`,
-			description: `Вправа для косих м'язів живота. Виконуйте по 30-45 секунд на кожну сторону.`,
-			img: `images/logo.svg`,
-		},
-	]
+const traning = [
+	{
+		name: `Планка`,
+		description: `Статична вправа для зміцнення преса, спини та плечей. Виконуйте 30-60 секунд.`,
+		img: `images/logo.svg`,
+	},
+	{
+		name: `Берпі`,
+		description: `Інтенсивна вправа для спалювання калорій і тренування всього тіла. Виконуйте 10-15 разів.`,
+		img: `images/logo.svg`,
+	},
+	{
+		name: `Скручування`,
+		description: `Класична вправа для преса. Виконуйте 20-25 повторів.`,
+		img: `images/logo.svg`,
+	},
+	{
+		name: `Присідання`,
+		description: `Вправа для м'язів ніг та сідниць. Виконуйте 15-20 повторів.`,
+		img: `images/logo.svg`,
+	},
+	{
+		name: `Випади`,
+		description: `Вправа для зміцнення ніг і сідниць. Виконуйте 10-15 разів на кожну ногу.`,
+		img: `images/logo.svg`,
+	},
+	{
+		name: `Віджимання`,
+		description: `Вправа для грудних м'язів, трицепсів і плечей. Виконуйте 15-20 разів.`,
+		img: `images/logo.svg`,
+	},
+	{
+		name: `Скакалка`,
+		description: `Кардіо-вправа для спалювання калорій. Стрибати 1-2 хвилини.`,
+		img: `images/logo.svg`,
+	},
+	{
+		name: `Місток`,
+		description: `Вправа для сідниць і нижньої частини спини. Виконуйте 20-25 разів.`,
+		img: `images/logo.svg`,
+	},
+	{
+		name: `Альпініст`,
+		description: `Динамічна вправа для преса і кардіо. Виконуйте 30-45 секунд.`,
+		img: `images/logo.svg`,
+	},
+	{
+		name: `Бічна планка`,
+		description: `Вправа для косих м'язів живота. Виконуйте по 30-45 секунд на кожну сторону.`,
+		img: `images/logo.svg`,
+	},
+]
+
+const muscleTraining = [
+	{
+		name: `Присідання з вагою`,
+		description: `Базова силова вправа для м'язів ніг, сідниць і корпусу. Виконуйте 8-12 повторів з гантелями або штангою.`,
+		img: `/images/logo.svg`,
+	},
+	{
+		name: `Жим гантелей лежачи`,
+		description: `Ефективна вправа для нарощування грудних м'язів і трицепсів. Зробіть 8-10 повторів з помірною вагою.`,
+		img: `/images/logo.svg`,
+	},
+	{
+		name: `Тяга гантелі до поясу`,
+		description: `Відмінна вправа для зміцнення спини та біцепсів. Виконуйте 8-12 повторів на кожну руку.`,
+		img: `/images/logo.svg`,
+	},
+	{
+		name: `Віджимання на брусах`,
+		description: `Розвиває грудні м'язи, плечі і трицепси. Виконуйте 6-10 повторів з додатковою вагою, якщо можливо.`,
+		img: `/images/logo.svg`,
+	},
+	{
+		name: `Румунська станова тяга`,
+		description: `Вправа для біцепсів стегна, сідниць і спини. Зробіть 8-12 повторів з гантелями або штангою.`,
+		img: `/images/logo.svg`,
+	},
+	{
+		name: `Підтягування широким хватом`,
+		description: `Розвиває спину, біцепси та плечі. Виконуйте 5-10 повторів, додаючи вагу при необхідності.`,
+		img: `/images/logo.svg`,
+	},
+	{
+		name: `Жим плечима гантелей`,
+		description: `Вправа для дельтоподібних м'язів. Зробіть 10-12 повторів з помірною вагою.`,
+		img: `/images/logo.svg`,
+	},
+	{
+		name: `Підйом на біцепс`,
+		description: `Класична вправа для біцепсів. Виконуйте 8-12 повторів з гантелями або штангою.`,
+		img: `/images/logo.svg`,
+	},
+	{
+		name: `Французький жим`,
+		description: `Ізольована вправа для трицепсів. Зробіть 8-12 повторів з гантелею або штангою EZ.`,
+		img: `/images/logo.svg`,
+	},
+	{
+		name: `Планка з вагою`,
+		description: `Зміцнює корпус і м'язи стабілізатори. Тримайте 30-60 секунд з додатковою вагою на спині.`,
+		img: `/images/logo.svg`,
+	},
+]
+
+const foodForWeightLoss = [
+	{
+		name: `Авокадо`,
+		description: `Поживний продукт з корисними жирами, що сприяє відчуттю ситості.`,
+		img: `images/logo.svg`,
+	},
+	{
+		name: `Куряче філе`,
+		description: `Багате на білок м'ясо, яке допомагає нарощувати м'язи та зберігати енергію.`,
+		img: `images/logo.svg`,
+	},
+	{
+		name: `Овсянка`,
+		description: `Складний вуглевод, що забезпечує довготривале відчуття ситості.`,
+		img: `images/logo.svg`,
+	},
+	{
+		name: `Броколі`,
+		description: `Низькокалорійний овоч, багатий на клітковину та вітаміни.`,
+		img: `images/logo.svg`,
+	},
+	{
+		name: `Яйця`,
+		description: `Джерело білка та корисних жирів для підтримки енергії.`,
+		img: `images/logo.svg`,
+	},
+	{
+		name: `Мигдаль`,
+		description: `Горіх, що містить корисні жири та підтримує відчуття ситості.`,
+		img: `images/logo.svg`,
+	},
+	{
+		name: `Гречка`,
+		description: `Корисна крупа з високим вмістом білка та заліза.`,
+		img: `images/logo.svg`,
+	},
+	{
+		name: `Йогурт без цукру`,
+		description: `Продукт, багатий на пробіотики, що підтримують здоров’я травлення.`,
+		img: `images/logo.svg`,
+	},
+	{
+		name: `Лосось`,
+		description: `Риба, багата на омега-3 кислоти, які корисні для серця.`,
+		img: `images/logo.svg`,
+	},
+	{
+		name: `Огірки`,
+		description: `Низькокалорійний овоч, що чудово зволожує організм.`,
+		img: `images/logo.svg`,
+	},
+]
+
+const foodForMuscle = [
+	{
+		name: `Яловичина (пісна)`,
+		description: `Багата на білок, залізо та креатин. Містить цинк для підтримки рівня тестостерону.`,
+		img: `images/logo.svg`,
+	},
+	{
+		name: `Тунець`,
+		description: `Високий вміст білка та омега-3. Підтримує здоров’я суглобів і відновлення.`,
+		img: `images/logo.svg`,
+	},
+	{
+		name: `Арахісова паста (без цукру)`,
+		description: `Джерело білка, корисних жирів та вуглеводів. Підходить як енергетична закуска.`,
+		img: `images/logo.svg`,
+	},
+	{
+		name: `Сир (творог)`,
+		description: `Містить казеїновий білок, який живить м’язи протягом ночі. Багатий кальцієм.`,
+		img: `images/logo.svg`,
+	},
+	{
+		name: `Банани`,
+		description: `Джерело швидких вуглеводів для енергії. Допомагають поповнити запаси глікогену.`,
+		img: `images/logo.svg`,
+	},
+	{
+		name: `Чіа та льон`,
+		description: `Містять омега-3, клітковину та білок. Покращують відновлення м’язів.`,
+		img: `images/logo.svg`,
+	},
+	{
+		name: `Шпинат`,
+		description: `Багатий залізом, магнієм та нітратами, які підвищують витривалість.`,
+		img: `images/logo.svg`,
+	},
+	{
+		name: `Батат (солодка картопля)`,
+		description: `Джерело повільних вуглеводів та клітковини. Підтримує енергію на тренуваннях.`,
+		img: `images/logo.svg`,
+	},
+	{
+		name: `Протеїнові коктейлі`,
+		description: `Швидкий спосіб отримати білок. Ідеальний варіант після тренувань.`,
+		img: `images/logo.svg`,
+	},
+	{
+		name: `Часник`,
+		description: `Підвищує рівень тестостерону та знижує кортизол. Покращує кровообіг.`,
+		img: `images/logo.svg`,
+	},
+]
+
+function functionWeightLoss(element) {
 	let cardsHTML = ''
-	traning.forEach((element) => {
+	element.forEach((element) => {
 		cardsHTML += `
     <div class="card">
       <img src="${element.img}" alt="${element.name}">
@@ -121,198 +281,13 @@ function functionWeightLoss() {
       <p>${element.description}</p>
       <button class="btn-delete">Я виконав ці вправи</button>
     </div>`
-
 		cardContainerContent.innerHTML = cardsHTML
 	})
 }
 
-function functionMuscle() {
-	const muscleTraining = [
-		{
-			name: `Присідання з вагою`,
-			description: `Базова силова вправа для м'язів ніг, сідниць і корпусу. Виконуйте 8-12 повторів з гантелями або штангою.`,
-			img: `/images/logo.svg`,
-		},
-		{
-			name: `Жим гантелей лежачи`,
-			description: `Ефективна вправа для нарощування грудних м'язів і трицепсів. Зробіть 8-10 повторів з помірною вагою.`,
-			img: `/images/logo.svg`,
-		},
-		{
-			name: `Тяга гантелі до поясу`,
-			description: `Відмінна вправа для зміцнення спини та біцепсів. Виконуйте 8-12 повторів на кожну руку.`,
-			img: `/images/logo.svg`,
-		},
-		{
-			name: `Віджимання на брусах`,
-			description: `Розвиває грудні м'язи, плечі і трицепси. Виконуйте 6-10 повторів з додатковою вагою, якщо можливо.`,
-			img: `/images/logo.svg`,
-		},
-		{
-			name: `Румунська станова тяга`,
-			description: `Вправа для біцепсів стегна, сідниць і спини. Зробіть 8-12 повторів з гантелями або штангою.`,
-			img: `/images/logo.svg`,
-		},
-		{
-			name: `Підтягування широким хватом`,
-			description: `Розвиває спину, біцепси та плечі. Виконуйте 5-10 повторів, додаючи вагу при необхідності.`,
-			img: `/images/logo.svg`,
-		},
-		{
-			name: `Жим плечима гантелей`,
-			description: `Вправа для дельтоподібних м'язів. Зробіть 10-12 повторів з помірною вагою.`,
-			img: `/images/logo.svg`,
-		},
-		{
-			name: `Підйом на біцепс`,
-			description: `Класична вправа для біцепсів. Виконуйте 8-12 повторів з гантелями або штангою.`,
-			img: `/images/logo.svg`,
-		},
-		{
-			name: `Французький жим`,
-			description: `Ізольована вправа для трицепсів. Зробіть 8-12 повторів з гантелею або штангою EZ.`,
-			img: `/images/logo.svg`,
-		},
-		{
-			name: `Планка з вагою`,
-			description: `Зміцнює корпус і м'язи стабілізатори. Тримайте 30-60 секунд з додатковою вагою на спині.`,
-			img: `/images/logo.svg`,
-		},
-	]
-	let cardsHTML = ''
-	muscleTraining.forEach((element) => {
-		cardsHTML += `
-    <div class="card">
-      <img src="${element.img}" alt="${element.name}">
-      <h3>${element.name}</h3>
-      <p>${element.description}</p>
-      <button class="btn-delete">Я виконав ці вправи</button>
-    </div>`
-		cardContainerContent.innerHTML = cardsHTML
-	})
-}
-
-function eatWeightLoss() {
-	const foodForWeightLoss = [
-		{
-			name: `Авокадо`,
-			description: `Поживний продукт з корисними жирами, що сприяє відчуттю ситості.`,
-			img: `images/logo.svg`,
-		},
-		{
-			name: `Куряче філе`,
-			description: `Багате на білок м'ясо, яке допомагає нарощувати м'язи та зберігати енергію.`,
-			img: `images/logo.svg`,
-		},
-		{
-			name: `Овсянка`,
-			description: `Складний вуглевод, що забезпечує довготривале відчуття ситості.`,
-			img: `images/logo.svg`,
-		},
-		{
-			name: `Броколі`,
-			description: `Низькокалорійний овоч, багатий на клітковину та вітаміни.`,
-			img: `images/logo.svg`,
-		},
-		{
-			name: `Яйця`,
-			description: `Джерело білка та корисних жирів для підтримки енергії.`,
-			img: `images/logo.svg`,
-		},
-		{
-			name: `Мигдаль`,
-			description: `Горіх, що містить корисні жири та підтримує відчуття ситості.`,
-			img: `images/logo.svg`,
-		},
-		{
-			name: `Гречка`,
-			description: `Корисна крупа з високим вмістом білка та заліза.`,
-			img: `images/logo.svg`,
-		},
-		{
-			name: `Йогурт без цукру`,
-			description: `Продукт, багатий на пробіотики, що підтримують здоров’я травлення.`,
-			img: `images/logo.svg`,
-		},
-		{
-			name: `Лосось`,
-			description: `Риба, багата на омега-3 кислоти, які корисні для серця.`,
-			img: `images/logo.svg`,
-		},
-		{
-			name: `Огірки`,
-			description: `Низькокалорійний овоч, що чудово зволожує організм.`,
-			img: `images/logo.svg`,
-		},
-	]
+function eatWeightLoss(food) {
 	let cardsSecondlyHTML = ''
-	foodForWeightLoss.forEach((element) => {
-		cardsSecondlyHTML += `
-    <div class="card-eat">
-      <h3>${element.name}</h3>
-      <p>${element.description}</p>
-      <button class="btn-delete">Я почав їсти корисну для мене їжу</button>
-	  <img src="${element.img}" alt="${element.name}">
-    </div>`
-		eatContainer.innerHTML = cardsSecondlyHTML
-	})
-}
-
-function eatMuscle() {
-	const foodForMuscle = [
-		{
-			name: `Яловичина (пісна)`,
-			description: `Багата на білок, залізо та креатин. Містить цинк для підтримки рівня тестостерону.`,
-			img: `images/logo.svg`,
-		},
-		{
-			name: `Тунець`,
-			description: `Високий вміст білка та омега-3. Підтримує здоров’я суглобів і відновлення.`,
-			img: `images/logo.svg`,
-		},
-		{
-			name: `Арахісова паста (без цукру)`,
-			description: `Джерело білка, корисних жирів та вуглеводів. Підходить як енергетична закуска.`,
-			img: `images/logo.svg`,
-		},
-		{
-			name: `Сир (творог)`,
-			description: `Містить казеїновий білок, який живить м’язи протягом ночі. Багатий кальцієм.`,
-			img: `images/logo.svg`,
-		},
-		{
-			name: `Банани`,
-			description: `Джерело швидких вуглеводів для енергії. Допомагають поповнити запаси глікогену.`,
-			img: `images/logo.svg`,
-		},
-		{
-			name: `Чіа та льон`,
-			description: `Містять омега-3, клітковину та білок. Покращують відновлення м’язів.`,
-			img: `images/logo.svg`,
-		},
-		{
-			name: `Шпинат`,
-			description: `Багатий залізом, магнієм та нітратами, які підвищують витривалість.`,
-			img: `images/logo.svg`,
-		},
-		{
-			name: `Батат (солодка картопля)`,
-			description: `Джерело повільних вуглеводів та клітковини. Підтримує енергію на тренуваннях.`,
-			img: `images/logo.svg`,
-		},
-		{
-			name: `Протеїнові коктейлі`,
-			description: `Швидкий спосіб отримати білок. Ідеальний варіант після тренувань.`,
-			img: `images/logo.svg`,
-		},
-		{
-			name: `Часник`,
-			description: `Підвищує рівень тестостерону та знижує кортизол. Покращує кровообіг.`,
-			img: `images/logo.svg`,
-		},
-	]
-	let cardsSecondlyHTML = ''
-	foodForMuscle.forEach((element) => {
+	food.forEach((element) => {
 		cardsSecondlyHTML += `
     <div class="card-eat">
       <h3>${element.name}</h3>
@@ -338,18 +313,19 @@ btnOpenResult.addEventListener('click', () => {
 	if (weight === idealWeight) {
 		innerText.textContent = 'Ваша вага ідеальна'
 		resultBody = 'ideal'
-		functionMuscle()
+		functionWeightLoss(muscleTraining)
+		eatWeightLoss(foodForMuscle)
 	} else if (weight < idealWeight) {
 		innerText.textContent = 'Ви занадто худий'
 		resultBody = 'Вправи на нарощення мускул'
-		functionMuscle()
+		functionWeightLoss(muscleTraining)
 		cardContainerContent.classList.toggle('container')
-		eatMuscle()
+		eatWeightLoss(foodForMuscle)
 	} else if (weight > idealWeight) {
 		innerText.textContent = 'Вам було би непогано схуднути'
 		resultBody = 'Вправи на похудання'
-		functionWeightLoss()
-		eatWeightLoss()
+		functionWeightLoss(traning)
+		eatWeightLoss(foodForWeightLoss)
 		cardContainerContent.classList.toggle('container')
 		eatContainer.classList.toggle('container')
 	}

@@ -345,8 +345,9 @@ header .header-main .navigation .nav-info .nav-title {
 }
 
 .card-eat {
+	gap: 3vw;
 	width: 70vw;
-	margin-left: 15vw;
+	margin-left: 10vw;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
