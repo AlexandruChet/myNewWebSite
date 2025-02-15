@@ -264,8 +264,6 @@ header .header-main .navigation .nav-info .nav-title {
 }
 
 .card-container {
-	padding-top: 5vw;
-	padding-bottom: 5vw;
 	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 	background: url(https://www.bodymedia.de/fileadmin/_processed_/8/7/csm_100-prozent-fitness-personalloses-studiokonzept_4f23f01a0a.jpg);
 	background-size: cover;
@@ -278,14 +276,14 @@ header .header-main .navigation .nav-info .nav-title {
 
 .card {
 	width: 30vw;
-  margin-left: 5vw;
-  margin-top: 1vw;
+	margin-left: 5vw;
+	margin-top: 1vw;
 	background: #1a1a1a;
 	border-radius: 1rem;
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 	overflow: hidden;
 	text-align: center;
-  justify-content: center;
+	justify-content: center;
 	transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
 }
 
@@ -335,6 +333,68 @@ header .header-main .navigation .nav-info .nav-title {
 	background: #0056b3;
 	transform: scale(1.05);
 }
+
+.eat-container {
+	display: grid;
+	gap: 24px;
+	font-family: monospace;
+	background: url(https://images.fitnessintl.com/images/CMS/LAF/Amenities/blogimage.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.card-eat {
+	width: 70vw;
+	margin-left: 15vw;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #ffffff;
+	border-radius: 24px;
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+	padding: 16px;
+	transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+	border: 2px solid transparent;
+}
+.card-eat:hover {
+	transform: translateY(-8px);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+	border-color: #02e1ff;
+}
+.card-eat img {
+	width: 20vw;
+	height: 120px;
+	object-fit: cover;
+	border-radius: 16px;
+	border: 2px solid #e0e0e0;
+}
+.card-eat h3 {
+	font-size: 22px;
+	font-weight: bold;
+	color: #222;
+	margin-bottom: 8px;
+}
+.card-eat p {
+	font-size: 16px;
+	color: #555;
+	margin-bottom: 12px;
+}
+.card-eat button {
+	padding: 10px 16px;
+	font-size: 1rem;
+	font-weight: bold;
+	background-color: #7aff22;
+	color: #fff;
+	border: none;
+	border-radius: 12px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+.card-eat button:hover {
+	background-color: #ff3c01;
+}
+
 
 @media (max-width: 768px) {
 	header .header-main {

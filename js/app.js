@@ -57,6 +57,7 @@ btnOpenP.addEventListener('click', () => {
 const btnOpenResult = document.getElementById('btn_open')
 const innerText = document.getElementById('open-text')
 const cardContainerContent = document.querySelector('.card-container')
+const eatContainer = document.getElementById('eat-container')
 
 function functionWeightLoss() {
 	const traning = [
@@ -191,6 +192,72 @@ function functionMuscle() {
 	})
 }
 
+function eatWeightLoss() {
+	const foodForWeightLoss = [
+		{
+			name: `Авокадо`,
+			description: `Поживний продукт з корисними жирами, що сприяє відчуттю ситості.`,
+			img: `images/logo.svg`,
+		},
+		{
+			name: `Куряче філе`,
+			description: `Багате на білок м'ясо, яке допомагає нарощувати м'язи та зберігати енергію.`,
+			img: `images/logo.svg`,
+		},
+		{
+			name: `Овсянка`,
+			description: `Складний вуглевод, що забезпечує довготривале відчуття ситості.`,
+			img: `images/logo.svg`,
+		},
+		{
+			name: `Броколі`,
+			description: `Низькокалорійний овоч, багатий на клітковину та вітаміни.`,
+			img: `images/logo.svg`,
+		},
+		{
+			name: `Яйця`,
+			description: `Джерело білка та корисних жирів для підтримки енергії.`,
+			img: `images/logo.svg`,
+		},
+		{
+			name: `Мигдаль`,
+			description: `Горіх, що містить корисні жири та підтримує відчуття ситості.`,
+			img: `images/logo.svg`,
+		},
+		{
+			name: `Гречка`,
+			description: `Корисна крупа з високим вмістом білка та заліза.`,
+			img: `images/logo.svg`,
+		},
+		{
+			name: `Йогурт без цукру`,
+			description: `Продукт, багатий на пробіотики, що підтримують здоров’я травлення.`,
+			img: `images/logo.svg`,
+		},
+		{
+			name: `Лосось`,
+			description: `Риба, багата на омега-3 кислоти, які корисні для серця.`,
+			img: `images/logo.svg`,
+		},
+		{
+			name: `Огірки`,
+			description: `Низькокалорійний овоч, що чудово зволожує організм.`,
+			img: `images/logo.svg`,
+		},
+	]
+	let cardsSecondlyHTML = ''
+	foodForWeightLoss.forEach((element) => {
+		cardsSecondlyHTML += `
+    <div class="card-eat">
+      <h3>${element.name}</h3>
+      <p>${element.description}</p>
+      <button class="btn-delete">Я почав їсти корисну для мене їжу</button>
+	  <img src="${element.img}" alt="${element.name}">
+    </div>`
+		eatContainer.innerHTML = cardsSecondlyHTML
+	})
+}
+
 btnOpenResult.addEventListener('click', () => {
 	const height = parseFloat(heightUserInput.value)
 	const weight = parseFloat(weightUserInput.value)
@@ -205,13 +272,18 @@ btnOpenResult.addEventListener('click', () => {
 	if (weight === idealWeight) {
 		innerText.textContent = 'Ваша вага ідеальна'
 		resultBody = 'ideal'
+		functionMuscle()
 	} else if (weight < idealWeight) {
 		innerText.textContent = 'Ви занадто худий'
 		resultBody = 'Вправи на нарощення мускул'
 		functionMuscle()
+		cardContainerContent.classList.toggle('container')
 	} else if (weight > idealWeight) {
 		innerText.textContent = 'Вам було би непогано схуднути'
 		resultBody = 'Вправи на похудання'
 		functionWeightLoss()
+		eatWeightLoss()
+		cardContainerContent.classList.toggle('container')
+		eatContainer.classList.toggle('container')
 	}
 })
