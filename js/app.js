@@ -258,6 +258,72 @@ function eatWeightLoss() {
 	})
 }
 
+function eatMuscle() {
+	const foodForMuscle = [
+		{
+			name: `Яловичина (пісна)`,
+			description: `Багата на білок, залізо та креатин. Містить цинк для підтримки рівня тестостерону.`,
+			img: `images/logo.svg`,
+		},
+		{
+			name: `Тунець`,
+			description: `Високий вміст білка та омега-3. Підтримує здоров’я суглобів і відновлення.`,
+			img: `images/logo.svg`,
+		},
+		{
+			name: `Арахісова паста (без цукру)`,
+			description: `Джерело білка, корисних жирів та вуглеводів. Підходить як енергетична закуска.`,
+			img: `images/logo.svg`,
+		},
+		{
+			name: `Сир (творог)`,
+			description: `Містить казеїновий білок, який живить м’язи протягом ночі. Багатий кальцієм.`,
+			img: `images/logo.svg`,
+		},
+		{
+			name: `Банани`,
+			description: `Джерело швидких вуглеводів для енергії. Допомагають поповнити запаси глікогену.`,
+			img: `images/logo.svg`,
+		},
+		{
+			name: `Чіа та льон`,
+			description: `Містять омега-3, клітковину та білок. Покращують відновлення м’язів.`,
+			img: `images/logo.svg`,
+		},
+		{
+			name: `Шпинат`,
+			description: `Багатий залізом, магнієм та нітратами, які підвищують витривалість.`,
+			img: `images/logo.svg`,
+		},
+		{
+			name: `Батат (солодка картопля)`,
+			description: `Джерело повільних вуглеводів та клітковини. Підтримує енергію на тренуваннях.`,
+			img: `images/logo.svg`,
+		},
+		{
+			name: `Протеїнові коктейлі`,
+			description: `Швидкий спосіб отримати білок. Ідеальний варіант після тренувань.`,
+			img: `images/logo.svg`,
+		},
+		{
+			name: `Часник`,
+			description: `Підвищує рівень тестостерону та знижує кортизол. Покращує кровообіг.`,
+			img: `images/logo.svg`,
+		},
+	]
+	let cardsSecondlyHTML = ''
+	foodForMuscle.forEach((element) => {
+		cardsSecondlyHTML += `
+    <div class="card-eat">
+      <h3>${element.name}</h3>
+      <p>${element.description}</p>
+      <button class="btn-delete">Я почав їсти корисну для мене їжу</button>
+	  <img src="${element.img}" alt="${element.name}">
+    </div>`
+		eatContainer.innerHTML = cardsSecondlyHTML
+	})
+}
+
 btnOpenResult.addEventListener('click', () => {
 	const height = parseFloat(heightUserInput.value)
 	const weight = parseFloat(weightUserInput.value)
@@ -278,6 +344,7 @@ btnOpenResult.addEventListener('click', () => {
 		resultBody = 'Вправи на нарощення мускул'
 		functionMuscle()
 		cardContainerContent.classList.toggle('container')
+		eatMuscle()
 	} else if (weight > idealWeight) {
 		innerText.textContent = 'Вам було би непогано схуднути'
 		resultBody = 'Вправи на похудання'
