@@ -395,6 +395,63 @@ header .header-main .navigation .nav-info .nav-title {
 	background-color: #ff3c01;
 }
 
+.modal-window-section {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	background-color: #1a1a1a;
+	padding-top: 5vw;
+	padding-bottom: 5vw;
+	justify-content: center;
+	align-items: center;
+}
+
+.open-modal-window {
+	font-size: 2rem;
+	color: #ffffff;
+	padding: 1rem 2rem;
+	border-radius: 1rem;
+	background-color: #007bff;
+}
+
+.modal-window {
+	display: none;
+	background-color: white;
+	border-radius: 2vw;
+	margin-top: 5vw;
+	text-align: center;
+}
+
+.img-window {
+	margin-top: 2.5vw;
+	width: 50vw;
+	height: 15vw;
+	object-fit: cover;
+	cursor: pointer;
+	transition: transform 1.5s ease;
+	object-position: top;
+}
+
+.img-window:hover {
+	object-position: center;
+	transform: scale(1.05);
+	border-radius: 3vw;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.modal-window-text{
+	margin-top: 1vw;
+	font-size: 2vw;
+}
+
+.close-modal-button{
+	border-radius: 2vw;
+	margin-bottom: 1vw;
+	font-size: 2vw;
+	color: white;
+	margin-top: 1vw;
+	background-color: red;
+	width: 10vw;
+	height: 3vw;
+}
 
 @media (max-width: 768px) {
 	header .header-main {

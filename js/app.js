@@ -354,3 +354,15 @@ btnOpenResult.addEventListener('click', () => {
 		eatContainer.classList.toggle('container')
 	}
 })
+
+const modalWindow = document.querySelector('.modal-window')
+const openModalBtn = document.querySelector('.open-modal-window')
+const closeModalBtn = document.querySelector('.close-modal-button')
+
+openModalBtn.addEventListener('click', () => {
+	modalWindow.style.display = 'block'
+})
+
+closeModalBtn.addEventListener('click', () => {
+	modalWindow.style.display = 'none'
+})
