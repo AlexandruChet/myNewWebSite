@@ -305,17 +305,25 @@ function functionWeightLoss(element) {
 	})
 }
 
-function eatWeightLoss(food) {
+function eatWeightLoss(element) {
 	let cardsSecondlyHTML = ''
 	food.forEach((element) => {
 		cardsSecondlyHTML += `
     <div class="card-eat">
       <h3>${element.name}</h3>
       <p>${element.description}</p>
-      <button class="btn-delete">Я почав їсти корисну для мене їжу</button>
+      <button class="btn-eat-delete">Я почав їсти корисну для мене їжу</button>
 	  <img src="${element.img}" alt="${element.name}">
     </div>`
 		eatContainer.innerHTML = cardsSecondlyHTML
+	})
+
+	const btnDeleteEat = document.querySelectorAll('.btn-eat-delete')
+	btnDeleteEat.forEach((event) => {
+		event.addEventListener('click', () => {
+			const containerResult = weightUserInput.value + element.calories / 4
+			pluseText()
+		})
 	})
 }
 
@@ -350,7 +358,6 @@ btnOpenResult.addEventListener('click', () => {
 		eatContainer.classList.toggle('container')
 	}
 })
-
 class User {
 	constructor(name, gender, height, weight) {
 		this.name = name
@@ -359,23 +366,23 @@ class User {
 		this.weight = weight
 	}
 }
-
-const You = new User(
-	userNameInput.value,
-	genderUserInput.value,
-	heightUserInput.value,
-	weightUserInput.value
-)
-
 const myNameStatt = document.querySelector('.myName')
 const myGenderStatt = document.querySelector('.myGender')
 const myHeightStatt = document.querySelector('.myHeight')
 const myWeightStatt = document.querySelector('.myWeight')
-
-myNameStatt.textContent = You.name
-myGenderStatt.textContent = You.gender
-myHeightStatt.textContent = You.height
-myWeightStatt.textContent = You.weight
+const save = document.querySelector('.save')
+save.addEventListener('click', () => {
+	const You = new User(
+		userNameInput.value,
+		genderUserInput.value,
+		heightUserInput.value,
+		weightUserInput.value
+	)
+	myNameStatt.textContent = You.name
+	myGenderStatt.textContent = You.gender
+	myHeightStatt.textContent = You.height
+	myWeightStatt.textContent = You.weight
+})
 
 const modalWindow = document.querySelector('.modal-window')
 const openModalBtn = document.querySelector('.open-modal-window')
@@ -396,14 +403,14 @@ btnOpenMoreInfo.addEventListener('click', () => {
 	contentInfo.classList.toggle('active')
 })
 
-const btnNext = document.getElementById('next-button');
-const btnBefore = document.getElementById('before-button');
-const gallery = document.querySelector('.gallery');
+const btnNext = document.getElementById('next-button')
+const btnBefore = document.getElementById('before-button')
+const gallery = document.querySelector('.gallery')
 
 btnNext.addEventListener('click', () => {
-	gallery.scrollLeft += 100;
-});
+	gallery.scrollLeft += 100
+})
 
 btnBefore.addEventListener('click', () => {
-	gallery.scrollLeft -= 100;
-});
+	gallery.scrollLeft -= 100
+})
