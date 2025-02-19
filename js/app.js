@@ -170,51 +170,61 @@ const foodForWeightLoss = [
 		name: `Авокадо`,
 		description: `Поживний продукт з корисними жирами, що сприяє відчуттю ситості.`,
 		img: `images/logo.svg`,
+		calories: 0.160,
 	},
 	{
 		name: `Куряче філе`,
 		description: `Багате на білок м'ясо, яке допомагає нарощувати м'язи та зберігати енергію.`,
 		img: `images/logo.svg`,
+		calories: 0.165,
 	},
 	{
 		name: `Овсянка`,
 		description: `Складний вуглевод, що забезпечує довготривале відчуття ситості.`,
 		img: `images/logo.svg`,
+		calories: 0.68,
 	},
 	{
 		name: `Броколі`,
 		description: `Низькокалорійний овоч, багатий на клітковину та вітаміни.`,
 		img: `images/logo.svg`,
+		calories: 0.34,
 	},
 	{
 		name: `Яйця`,
 		description: `Джерело білка та корисних жирів для підтримки енергії.`,
 		img: `images/logo.svg`,
+		calories: 0.70,
 	},
 	{
 		name: `Мигдаль`,
 		description: `Горіх, що містить корисні жири та підтримує відчуття ситості.`,
 		img: `images/logo.svg`,
+		calories: 0.579,
 	},
 	{
 		name: `Гречка`,
 		description: `Корисна крупа з високим вмістом білка та заліза.`,
 		img: `images/logo.svg`,
+		calories: 0.343,
 	},
 	{
 		name: `Йогурт без цукру`,
 		description: `Продукт, багатий на пробіотики, що підтримують здоров’я травлення.`,
 		img: `images/logo.svg`,
+		calories: 0.75,
 	},
 	{
 		name: `Лосось`,
 		description: `Риба, багата на омега-3 кислоти, які корисні для серця.`,
 		img: `images/logo.svg`,
+		calories: 0.206,
 	},
 	{
 		name: `Огірки`,
 		description: `Низькокалорійний овоч, що чудово зволожує організм.`,
 		img: `images/logo.svg`,
+		calories: 0.16,
 	},
 ]
 
@@ -223,52 +233,62 @@ const foodForMuscle = [
 		name: `Яловичина (пісна)`,
 		description: `Багата на білок, залізо та креатин. Містить цинк для підтримки рівня тестостерону.`,
 		img: `images/logo.svg`,
+		calories: 0.250,
 	},
 	{
 		name: `Тунець`,
 		description: `Високий вміст білка та омега-3. Підтримує здоров’я суглобів і відновлення.`,
 		img: `images/logo.svg`,
+		calories: 0.132,
 	},
 	{
 		name: `Арахісова паста (без цукру)`,
 		description: `Джерело білка, корисних жирів та вуглеводів. Підходить як енергетична закуска.`,
 		img: `images/logo.svg`,
+		calories: 0.598,
 	},
 	{
 		name: `Сир (творог)`,
 		description: `Містить казеїновий білок, який живить м’язи протягом ночі. Багатий кальцієм.`,
 		img: `images/logo.svg`,
+		calories: 0.98,
 	},
 	{
 		name: `Банани`,
 		description: `Джерело швидких вуглеводів для енергії. Допомагають поповнити запаси глікогену.`,
 		img: `images/logo.svg`,
+		calories: 0.89,
 	},
 	{
 		name: `Чіа та льон`,
 		description: `Містять омега-3, клітковину та білок. Покращують відновлення м’язів.`,
 		img: `images/logo.svg`,
+		calories: 0.486,
 	},
 	{
 		name: `Шпинат`,
 		description: `Багатий залізом, магнієм та нітратами, які підвищують витривалість.`,
 		img: `images/logo.svg`,
+		calories: 0.23,
 	},
 	{
 		name: `Батат (солодка картопля)`,
 		description: `Джерело повільних вуглеводів та клітковини. Підтримує енергію на тренуваннях.`,
 		img: `images/logo.svg`,
+		calories: 0.86,
 	},
 	{
 		name: `Протеїнові коктейлі`,
 		description: `Швидкий спосіб отримати білок. Ідеальний варіант після тренувань.`,
 		img: `images/logo.svg`,
+		calories: 0.120,
 	},
 	{
 		name: `Часник`,
 		description: `Підвищує рівень тестостерону та знижує кортизол. Покращує кровообіг.`,
 		img: `images/logo.svg`,
-	},
+		calories: 0.149
+	}
 ]
 
 function functionWeightLoss(element) {
@@ -331,6 +351,32 @@ btnOpenResult.addEventListener('click', () => {
 	}
 })
 
+class User {
+	constructor(name, gender, height, weight) {
+		this.name = name
+		this.gender = gender
+		this.height = height
+		this.weight = weight
+	}
+}
+
+const You = new User(
+	userNameInput.value,
+	genderUserInput.value,
+	heightUserInput.value,
+	weightUserInput.value
+)
+
+const myNameStatt = document.querySelector('.myName')
+const myGenderStatt = document.querySelector('.myGender')
+const myHeightStatt = document.querySelector('.myHeight')
+const myWeightStatt = document.querySelector('.myWeight')
+
+myNameStatt.textContent = You.name
+myGenderStatt.textContent = You.gender
+myHeightStatt.textContent = You.height
+myWeightStatt.textContent = You.weight
+
 const modalWindow = document.querySelector('.modal-window')
 const openModalBtn = document.querySelector('.open-modal-window')
 const closeModalBtn = document.querySelector('.close-modal-button')
@@ -341,4 +387,11 @@ openModalBtn.addEventListener('click', () => {
 
 closeModalBtn.addEventListener('click', () => {
 	modalWindow.style.display = 'none'
+})
+
+const btnOpenMoreInfo = document.getElementById('btn-event')
+const contentInfo = document.querySelector('.dropdown-container')
+
+btnOpenMoreInfo.addEventListener('click', () => {
+	contentInfo.classList.toggle('active')
 })
