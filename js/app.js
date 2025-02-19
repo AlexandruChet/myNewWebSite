@@ -307,7 +307,7 @@ function functionWeightLoss(element) {
 
 function eatWeightLoss(element) {
 	let cardsSecondlyHTML = ''
-	food.forEach((element) => {
+	element.forEach((element) => {
 		cardsSecondlyHTML += `
     <div class="card-eat">
       <h3>${element.name}</h3>
@@ -321,8 +321,15 @@ function eatWeightLoss(element) {
 	const btnDeleteEat = document.querySelectorAll('.btn-eat-delete')
 	btnDeleteEat.forEach((event) => {
 		event.addEventListener('click', () => {
-			const containerResult = weightUserInput.value + element.calories / 4
-			pluseText()
+			element.forEach((element)=>{
+				console.log(element.calories)
+				console.log(weightUserInput.value)
+				const containerResult = weightUserInput.value + element.calories / 4
+				weightUserInput.value= Math.round(containerResult)
+				weightUser.textContent = Math.round(containerResult)
+				console.log(containerResult)
+			})
+
 		})
 	})
 }
