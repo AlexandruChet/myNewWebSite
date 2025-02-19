@@ -170,7 +170,7 @@ const foodForWeightLoss = [
 		name: `Авокадо`,
 		description: `Поживний продукт з корисними жирами, що сприяє відчуттю ситості.`,
 		img: `images/logo.svg`,
-		calories: 0.160,
+		calories: 0.16,
 	},
 	{
 		name: `Куряче філе`,
@@ -194,7 +194,7 @@ const foodForWeightLoss = [
 		name: `Яйця`,
 		description: `Джерело білка та корисних жирів для підтримки енергії.`,
 		img: `images/logo.svg`,
-		calories: 0.70,
+		calories: 0.7,
 	},
 	{
 		name: `Мигдаль`,
@@ -233,7 +233,7 @@ const foodForMuscle = [
 		name: `Яловичина (пісна)`,
 		description: `Багата на білок, залізо та креатин. Містить цинк для підтримки рівня тестостерону.`,
 		img: `images/logo.svg`,
-		calories: 0.250,
+		calories: 0.25,
 	},
 	{
 		name: `Тунець`,
@@ -281,14 +281,14 @@ const foodForMuscle = [
 		name: `Протеїнові коктейлі`,
 		description: `Швидкий спосіб отримати білок. Ідеальний варіант після тренувань.`,
 		img: `images/logo.svg`,
-		calories: 0.120,
+		calories: 0.12,
 	},
 	{
 		name: `Часник`,
 		description: `Підвищує рівень тестостерону та знижує кортизол. Покращує кровообіг.`,
 		img: `images/logo.svg`,
-		calories: 0.149
-	}
+		calories: 0.149,
+	},
 ]
 
 function functionWeightLoss(element) {
@@ -395,3 +395,15 @@ const contentInfo = document.querySelector('.dropdown-container')
 btnOpenMoreInfo.addEventListener('click', () => {
 	contentInfo.classList.toggle('active')
 })
+
+const btnNext = document.getElementById('next-button');
+const btnBefore = document.getElementById('before-button');
+const gallery = document.querySelector('.gallery');
+
+btnNext.addEventListener('click', () => {
+	gallery.scrollLeft += 100;
+});
+
+btnBefore.addEventListener('click', () => {
+	gallery.scrollLeft -= 100;
+});
