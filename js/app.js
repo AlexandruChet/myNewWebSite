@@ -12,20 +12,20 @@ function burgerMenu() {
 
 menuButton.addEventListener('click', burgerMenu)
 
-const userNameInput = document.getElementById('nameUserInput')
-const genderUserInput = document.getElementById('genderUserInput')
-const heightUserInput = document.getElementById('heightUserInput')
-const weightUserInput = document.getElementById('weightUserInput')
+let userNameInput = document.getElementById('nameUserInput')
+let genderUserInput = document.getElementById('genderUserInput')
+let heightUserInput = document.getElementById('heightUserInput')
+let weightUserInput = document.getElementById('weightUserInput')
 
-const userName = document.getElementById('nameUser')
-const genderUser = document.getElementById('genderUser')
-const heightUser = document.getElementById('heightUser')
-const weightUser = document.getElementById('weightUser')
+let userName = document.getElementById('nameUser')
+let genderUser = document.getElementById('genderUser')
+let heightUser = document.getElementById('heightUser')
+let weightUser = document.getElementById('weightUser')
 
-const firstUserName = document.getElementById('firstUserName')
-const firstUserGender = document.getElementById('firstUserGender')
-const firstUserHeight = document.getElementById('firstUserHeight')
-const firstUserWeight = document.getElementById('firstUserWeight')
+let firstUserName = document.getElementById('firstUserName')
+let firstUserGender = document.getElementById('firstUserGender')
+let firstUserHeight = document.getElementById('firstUserHeight')
+let firstUserWeight = document.getElementById('firstUserWeight')
 
 function pluseText(element, text) {
 	element.addEventListener('input', () => {
@@ -49,10 +49,10 @@ const openTextRegulations = document.getElementById('openText')
 
 btnOpenP.addEventListener('click', () => {
 	if (openTextRegulations.style.display === 'none') {
-		openTextRegulations.style.display = 'block'
+		openTextRegulations.style.display = 'block';
 	} else {
-		openTextRegulations.style.display = 'none'
-	}
+		openTextRegulations.style.display = 'none';
+	}	
 })
 const btnOpenResult = document.getElementById('btn_open')
 const innerText = document.getElementById('open-text')
@@ -170,7 +170,7 @@ const foodForWeightLoss = [
 		name: `Авокадо`,
 		description: `Поживний продукт з корисними жирами, що сприяє відчуттю ситості.`,
 		img: `images/logo.svg`,
-		calories: 0.16,
+		calories: 16,
 	},
 	{
 		name: `Куряче філе`,
@@ -182,19 +182,19 @@ const foodForWeightLoss = [
 		name: `Овсянка`,
 		description: `Складний вуглевод, що забезпечує довготривале відчуття ситості.`,
 		img: `images/logo.svg`,
-		calories: 0.68,
+		calories: 68,
 	},
 	{
 		name: `Броколі`,
 		description: `Низькокалорійний овоч, багатий на клітковину та вітаміни.`,
 		img: `images/logo.svg`,
-		calories: 0.34,
+		calories: 34,
 	},
 	{
 		name: `Яйця`,
 		description: `Джерело білка та корисних жирів для підтримки енергії.`,
 		img: `images/logo.svg`,
-		calories: 0.7,
+		calories: 7,
 	},
 	{
 		name: `Мигдаль`,
@@ -206,25 +206,25 @@ const foodForWeightLoss = [
 		name: `Гречка`,
 		description: `Корисна крупа з високим вмістом білка та заліза.`,
 		img: `images/logo.svg`,
-		calories: 0.343,
+		calories: 343,
 	},
 	{
 		name: `Йогурт без цукру`,
 		description: `Продукт, багатий на пробіотики, що підтримують здоров’я травлення.`,
 		img: `images/logo.svg`,
-		calories: 0.75,
+		calories: 75,
 	},
 	{
 		name: `Лосось`,
 		description: `Риба, багата на омега-3 кислоти, які корисні для серця.`,
 		img: `images/logo.svg`,
-		calories: 0.206,
+		calories:206,
 	},
 	{
 		name: `Огірки`,
 		description: `Низькокалорійний овоч, що чудово зволожує організм.`,
 		img: `images/logo.svg`,
-		calories: 0.16,
+		calories: 16,
 	},
 ]
 
@@ -307,32 +307,29 @@ function functionWeightLoss(element) {
 
 function eatWeightLoss(element) {
 	let cardsSecondlyHTML = ''
-	element.forEach((element) => {
+	element.forEach((item) => {
 		cardsSecondlyHTML += `
     <div class="card-eat">
-      <h3>${element.name}</h3>
-      <p>${element.description}</p>
+      <h3>${item.name}</h3>
+      <p>${item.description}</p>
       <button class="btn-eat-delete">Я почав їсти корисну для мене їжу</button>
-	  <img src="${element.img}" alt="${element.name}">
+	  <img src="${item.img}" alt="${item.name}">
     </div>`
-		eatContainer.innerHTML = cardsSecondlyHTML
 	})
+	eatContainer.innerHTML = cardsSecondlyHTML
 
 	const btnDeleteEat = document.querySelectorAll('.btn-eat-delete')
-	btnDeleteEat.forEach((event) => {
-		event.addEventListener('click', () => {
-			element.forEach((element)=>{
-				console.log(element.calories)
-				console.log(weightUserInput.value)
-				const containerResult = weightUserInput.value + element.calories / 4
-				weightUserInput.value= Math.round(containerResult)
-				weightUser.textContent = Math.round(containerResult)
-				console.log(containerResult)
-			})
-
+	btnDeleteEat.forEach((btn, index) => {
+		btn.addEventListener('click', () => {
+			const selectedFood = element[index]
+			const currentWeight = parseFloat(weightUserInput.value)
+			const containerResult = currentWeight + selectedFood.calories
+			weightUserInput.value = containerResult.toFixed(2)
+			weightUser.textContent = containerResult.toFixed(2)
 		})
 	})
 }
+
 
 btnOpenResult.addEventListener('click', () => {
 	const height = parseFloat(heightUserInput.value)
