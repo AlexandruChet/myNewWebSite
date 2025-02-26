@@ -49,10 +49,10 @@ const openTextRegulations = document.getElementById('openText')
 
 btnOpenP.addEventListener('click', () => {
 	if (openTextRegulations.style.display === 'none') {
-		openTextRegulations.style.display = 'block';
+		openTextRegulations.style.display = 'block'
 	} else {
-		openTextRegulations.style.display = 'none';
-	}	
+		openTextRegulations.style.display = 'none'
+	}
 })
 const btnOpenResult = document.getElementById('btn_open')
 const innerText = document.getElementById('open-text')
@@ -218,7 +218,7 @@ const foodForWeightLoss = [
 		name: `Лосось`,
 		description: `Риба, багата на омега-3 кислоти, які корисні для серця.`,
 		img: `images/logo.svg`,
-		calories:206,
+		calories: 206,
 	},
 	{
 		name: `Огірки`,
@@ -330,7 +330,6 @@ function eatWeightLoss(element) {
 	})
 }
 
-
 btnOpenResult.addEventListener('click', () => {
 	const height = parseFloat(heightUserInput.value)
 	const weight = parseFloat(weightUserInput.value)
@@ -375,6 +374,7 @@ const myGenderStatt = document.querySelector('.myGender')
 const myHeightStatt = document.querySelector('.myHeight')
 const myWeightStatt = document.querySelector('.myWeight')
 const save = document.querySelector('.save')
+
 save.addEventListener('click', () => {
 	const You = new User(
 		userNameInput.value,
@@ -417,4 +417,17 @@ btnNext.addEventListener('click', () => {
 
 btnBefore.addEventListener('click', () => {
 	gallery.scrollLeft -= 100
+})
+
+document.addEventListener('DOMContentLoaded', () => {
+	const headline = document.querySelector('.headline_footer')
+	const menuButton = document.querySelector('.btn-click-footer')
+
+	menuButton.addEventListener('click', () => {
+		if (getComputedStyle(headline).display === 'none') {
+			headline.style.display = 'block'
+		} else {
+			headline.style.display = 'none'
+		}
+	})
 })

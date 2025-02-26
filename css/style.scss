@@ -1,3 +1,7 @@
+html {
+	scroll-behavior: smooth;
+}
+
 img {
 	object-fit: cover;
 }
@@ -128,7 +132,7 @@ header {
 }
 
 .section-about-me {
-	background-color: #b3a0ff;
+	background-color: #1a1a1a;
 	padding-top: 5vw;
 	padding-bottom: 5vw;
 
@@ -302,6 +306,7 @@ header {
 	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 	background: url('https://www.bodymedia.de/fileadmin/_processed_/8/7/csm_100-prozent-fitness-personalloses-studiokonzept_4f23f01a0a.jpg')
 		center/cover fixed;
+	padding-bottom: 5vw;
 
 	.card {
 		width: 30vw;
@@ -328,8 +333,20 @@ header {
 				opacity: 0.8;
 			}
 		}
+		p{
+			color: white;
+		}
+		button{
+			background-color: #007bff;
+			width: 100%;
+			border: none;
+			color: white;
+			font-size: 2rem;
+			margin-top: auto;
+		}
 	}
 }
+
 .eat-container {
 	justify-content: center;
 	display: grid;
@@ -398,6 +415,7 @@ header {
 		}
 	}
 }
+
 .modal-window-section {
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 	background-color: #1a1a1a;
@@ -507,7 +525,7 @@ header {
 			&.active {
 				display: block;
 			}
-			img{
+			img {
 				width: 40vw;
 			}
 			.text-language {
@@ -637,6 +655,11 @@ header {
 			object-fit: cover;
 			margin-right: 20px;
 			cursor: pointer;
+			scroll-snap-align: start;
+			transition: transform 0.3s ease-in-out;
+			&:hover{
+				transform: scale(1.05);
+			}
 		}
 		.article-button-slider {
 			text-align: center;
@@ -762,7 +785,7 @@ footer {
 				}
 			}
 
-			p {
+			.headline_footer {
 				display: none;
 				font-size: 0.9rem;
 				opacity: 0.8;
