@@ -178,6 +178,36 @@ header {
 				color: #757575;
 			}
 		}
+		.save {
+			background-color: #c2fbd7;
+			border-radius: 100px;
+			box-shadow: rgba(44, 187, 99, 0.2) 0 -25px 18px -14px inset,
+				rgba(44, 187, 99, 0.15) 0 1px 2px, rgba(44, 187, 99, 0.15) 0 2px 4px,
+				rgba(44, 187, 99, 0.15) 0 4px 8px, rgba(44, 187, 99, 0.15) 0 8px 16px,
+				rgba(44, 187, 99, 0.15) 0 16px 32px;
+			color: green;
+			cursor: pointer;
+			display: inline-block;
+			font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto,
+				sans-serif;
+			padding: 7px 20px;
+			text-align: center;
+			text-decoration: none;
+			transition: all 250ms;
+			border: 0;
+			font-size: 16px;
+			user-select: none;
+			-webkit-user-select: none;
+			touch-action: manipulation;
+		}
+
+		.save:hover {
+			box-shadow: rgba(44, 187, 99, 0.35) 0 -25px 18px -14px inset,
+				rgba(44, 187, 99, 0.25) 0 1px 2px, rgba(44, 187, 99, 0.25) 0 2px 4px,
+				rgba(44, 187, 99, 0.25) 0 4px 8px, rgba(44, 187, 99, 0.25) 0 8px 16px,
+				rgba(44, 187, 99, 0.25) 0 16px 32px;
+			transform: scale(1.05) rotate(-1deg);
+		}
 
 		.regulations {
 			display: flex;
@@ -306,9 +336,13 @@ header {
 	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 	background: url('https://www.bodymedia.de/fileadmin/_processed_/8/7/csm_100-prozent-fitness-personalloses-studiokonzept_4f23f01a0a.jpg')
 		center/cover fixed;
-	padding-bottom: 5vw;
 
 	.card {
+		padding-top: 2vw;
+		margin-bottom: 2vw;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
 		width: 30vw;
 		margin: 1vw 0 0 5vw;
 		background: #1a1a1a;
@@ -333,16 +367,54 @@ header {
 				opacity: 0.8;
 			}
 		}
-		p{
+		p {
 			color: white;
 		}
-		button{
-			background-color: #007bff;
+		button {
+			appearance: none;
+			background-color: white;
+			border: 2px solid #1a1a1a;
+			border-radius: 15px;
+			box-sizing: border-box;
+			color: #3b3b3b;
+			cursor: pointer;
+			display: inline-block;
+			font-family: Roobert, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+				Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+				'Segoe UI Symbol';
+			font-size: 16px;
+			font-weight: 600;
+			line-height: normal;
+			margin: 0;
+			min-height: 60px;
+			min-width: 0;
+			outline: none;
+			padding: 16px 24px;
+			text-align: center;
+			text-decoration: none;
+			transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+			user-select: none;
+			-webkit-user-select: none;
+			touch-action: manipulation;
 			width: 100%;
-			border: none;
-			color: white;
-			font-size: 2rem;
-			margin-top: auto;
+			will-change: transform;
+		}
+
+		button:disabled {
+			pointer-events: none;
+		}
+
+		button:hover {
+			border: 2px solid #fff;
+			color: #fff;
+			background-color: #1a1a1a;
+			box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+			transform: translateY(-2px);
+		}
+
+		button:active {
+			box-shadow: none;
+			transform: translateY(0);
 		}
 	}
 }
@@ -358,6 +430,7 @@ header {
 	background-size: cover;
 
 	.card-eat {
+		margin-top: 5vw;
 		gap: 3vw;
 		width: 70vw;
 		margin-left: 10vw;
@@ -656,7 +729,7 @@ header {
 			cursor: pointer;
 			scroll-snap-align: start;
 			transition: transform 0.3s ease-in-out;
-			&:hover{
+			&:hover {
 				transform: scale(1.05);
 			}
 		}
@@ -902,5 +975,87 @@ footer {
 				}
 			}
 		}
+	}
+}
+
+@media (max-width: 650px) {
+	.eat-container {
+		gap: 16px;
+	}
+
+	.card-eat {
+		margin-top: 5vw;
+		width: 90vw;
+		flex-direction: column;
+		gap: 16px;
+		padding: 12px;
+	}
+
+	.card-eat img {
+		width: 80%;
+		height: auto;
+	}
+
+	.card-eat h3 {
+		font-size: 18px;
+	}
+
+	.card-eat p {
+		font-size: 14px;
+	}
+
+	.card-eat button {
+		padding: 8px 14px;
+		font-size: 0.9rem;
+	}
+}
+
+@media (max-width: 426px) {
+	header {
+		.menu-button {
+			.bar {
+				width: 5vw;
+				height: 0.5vw;
+			}
+		}
+	}
+	.card-container {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		.card {
+			padding-top: 10vw;
+			width: 80vw;
+		}
+	}
+	.eat-container {
+		gap: 16px;
+	}
+
+	.card-eat {
+		margin-top: 5vw;
+		width: 90vw;
+		flex-direction: column;
+		gap: 16px;
+		padding: 12px;
+	}
+
+	.card-eat img {
+		width: 80%;
+		height: auto;
+	}
+
+	.card-eat h3 {
+		font-size: 18px;
+	}
+
+	.card-eat p {
+		font-size: 14px;
+	}
+
+	.card-eat button {
+		padding: 8px 14px;
+		font-size: 0.9rem;
 	}
 }
