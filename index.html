@@ -4,8 +4,8 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>FitnessProgram</title>
-		<link rel="stylesheet" href="/css/reset.css" />
-		<link rel="stylesheet" href="/css/style.css" />
+		<link rel="stylesheet" href="/src/css/reset.css" />
+		<link rel="stylesheet" href="/src/css/style.css" />
 	</head>
 	<body>
 		<header class="header container">
@@ -41,6 +41,28 @@
 				</nav>
 			</div>
 		</header>
+		<div class="modal-window-capcha">
+			<div class="modal-capcha">
+				<section class="capcha-body">
+					<h3>ABC</h3>
+					<p>Введіть капчу</p>
+					<textarea name="" id="textareaCapcha"></textarea>
+					<button class="btn-close-capcha">Test</button>
+				</section>
+			</div>
+		</div>
+		<section class="password container">
+			<div class="form-validation">
+					<input
+					id="password-input"
+					type="text"
+					placeholder="Напишіть пароль цифрами"
+					maxlength="6"
+					minlength="6"
+				/><br />
+				<button id="btn-submit">Надіслати</button>
+			</div>
+		</section>
 		<section class="section-about-me container">
 			<div class="about-content">
 				<img src="/images/account.webp" height="300" width="300" />
@@ -113,11 +135,10 @@
 			<div class="first-container">
 				<button class="btn-event" id="btn-event">click</button>
 				<div class="dropdown-container active">
-					<img src="/images/fitness.png" width="400" height="200" />
+					<img src="/images/fitness.png" />
 					<br />
-					<a href="#" class="text-language"
-						>Дізнайтеся більше про правильне харчування для спортсменів.</a
-					>
+					<a href="#" class="text-language">
+						Калорії це лічильник ваги 4 калорії це один грам</a>
 				</div>
 			</div>
 			<div class="second-container">
@@ -213,6 +234,7 @@
 				</article>
 			</div>
 		</section>
+		<section class="bg-image"></section>
 		<section id="myQuestion">
 			<div class="qa">
 				<section class="question-section">
@@ -282,6 +304,6 @@
 				</div>
 			</div>
 		</footer>
-		<script type="module" src="/js/app.js"></script>
+		<script type="module" src="src/js/app.js"></script>
 	</body>
 </html>
