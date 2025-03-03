@@ -1,309 +1,413 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>FitnessProgram</title>
-		<link rel="stylesheet" href="/src/css/reset.css" />
-		<link rel="stylesheet" href="/src/css/style.css" />
-	</head>
-	<body>
-		<header class="header container">
-			<div class="header-main">
-				<button class="menu-button" id="btn-menu">
-					<span class="bar"></span>
-					<span class="bar"></span>
-					<span class="bar"></span>
-				</button>
-				<nav class="navigation" id="navigation">
-					<div class="header-icons">
-						<img src="images/logo.svg" class="icon" />
-						<h1 class="logo">FitnessProgram</h1>
-					</div>
-					<ul class="nav-list">
-						<li class="nav-item"><a href="#">Тренування</a></li>
-						<li class="nav-item"><a href="#">Їжа</a></li>
-						<li class="nav-item"><a href="#">Асортимент</a></li>
-						<li class="nav-item"><a href="#">Калорії</a></li>
-					</ul>
-					<article class="nav-info">
-						<img
-							src="images/account.webp"
-							class="nav-image"
-							height="50"
-							width="50"
-						/>
-						<h3 class="nav-title" id="firstUserName">Імя</h3>
-						<h3 class="nav-title" id="firstUserGender">Гендер</h3>
-						<h3 class="nav-title" id="firstUserHeight">Ріст</h3>
-						<h3 class="nav-title" id="firstUserWeight">Вага</h3>
-					</article>
-				</nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FitnessProgram</title>
+    <link rel="stylesheet" href="/src/styles/reset.css" />
+    <link rel="stylesheet" href="/src/styles/style.css" />
+  </head>
+  <body>
+    <header class="header container">
+      <div class="header-main">
+        <button class="menu-button" id="btn-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+        <nav class="navigation" id="navigation">
+          <div class="header-icons">
+            <img src="images/logo.svg" class="icon" />
+            <h1 class="logo">FitnessProgram</h1>
+          </div>
+          <ul class="nav-list">
+            <li class="nav-item"><a href="#">Тренування</a></li>
+            <li class="nav-item"><a href="#">Їжа</a></li>
+            <li class="nav-item"><a href="#">Асортимент</a></li>
+            <li class="nav-item"><a href="#">Калорії</a></li>
+          </ul>
+          <article class="nav-info">
+            <img
+              src="images/account.webp"
+              class="nav-image"
+              height="50"
+              width="50"
+            />
+            <h3 class="nav-title" id="firstUserName">Імя</h3>
+            <h3 class="nav-title" id="firstUserGender">Гендер</h3>
+            <h3 class="nav-title" id="firstUserHeight">Ріст</h3>
+            <h3 class="nav-title" id="firstUserWeight">Вага</h3>
+          </article>
+        </nav>
+      </div>
+    </header>
+    <div class="modal-window-capcha">
+      <div class="modal-capcha">
+        <section class="capcha-body">
+          <h3>16*21</h3>
+          <p>Введіть капчу</p>
+          <textarea id="textareaCapcha"></textarea>
+          <button class="btn-close-capcha">Test</button>
+        </section>
+      </div>
+    </div>
+    <section class="password container">
+      <div class="form-validation">
+        <input
+          id="password-input"
+          type="text"
+          placeholder="Напишіть пароль цифрами"
+          maxlength="6"
+          minlength="6"
+        /><br />
+        <button id="btn-submit">Надіслати</button>
+      </div>
+    </section>
+    <section class="section-about-me container">
+      <div class="about-content">
+        <img src="/images/account.webp" height="300" width="300" />
+        <h3 class="about-me" id="nameUser">Ім'я</h3>
+        <h3 class="about-me" id="genderUser">Гендер</h3>
+        <h3 class="about-me" id="heightUser">Ріст</h3>
+        <h3 class="about-me" id="weightUser">Вага</h3>
+      </div>
+      <div class="input-container">
+        <form action="">
+          <input
+            class="input-about-me"
+            id="nameUserInput"
+            type="text"
+            placeholder="Введіть імя"
+          />
+          <input
+            class="input-about-me"
+            id="genderUserInput"
+            type="text"
+            placeholder="Введіть гендер"
+          />
+          <input
+            class="input-about-me"
+            id="heightUserInput"
+            type="text"
+            placeholder="Введіть ріст"
+          />
+          <input
+            class="input-about-me"
+            id="weightUserInput"
+            type="text"
+            placeholder="Введіть вагу"
+          />
+        </form>
+        <button class="save">Save</button>
+        <article class="regulations">
+          <button id="btnOpenP">правила</button>
+          <p id="openText">Впишіть інформацію про ріст в сантиметрах.</p>
+        </article>
+      </div>
+    </section>
+    <section class="title-container">
+      <div class="title-text">
+        <article>
+          <h1 class="title_section">Дізнайтесь свої результати</h1>
+          <h3 class="headline_title">
+            Не засмучувайтемь ні в якому разі а працюйте над собою
+          </h3>
+          <button id="btn_open" class="btn_text-open">Детальніше</button>
+          <p id="open-text" class="open_text"></p>
+        </article>
+      </div>
+    </section>
+    <section class="bg-image"></section>
+    <section class="card-container"></section>
+    <section class="eat-container" id="eat-container"></section>
+    <section class="modal-window-section container">
+      <button class="open-modal-window">Відкрити</button>
+      <div class="modal-window">
+        <img class="img-window" src="/images/logo.svg" />
+        <h3 class="modal-window-text">
+          Наш сайт допоможе вам підібрати ідеальний режим тренувань і
+          харчування.
+        </h3>
+        <button class="close-modal-button">Закрити</button>
+      </div>
+    </section>
+    <section class="more-information container">
+      <div class="first-container">
+        <button class="btn-event" id="btn-event">click</button>
+        <div class="dropdown-container active">
+          <img src="/images/fitness.png" />
+          <br />
+          <a href="#" class="text-language">
+            Калорії це лічильник ваги 4 калорії це один грам</a
+          >
+        </div>
+      </div>
+      <div class="second-container">
+        <img src="/images/cal.jfif" class="img-information" />
+      </div>
+    </section>
+    <section class="bg-image"></section>
+    <section class="my-account">
+      <div class="my-content">
+        <h1>Мої стати</h1>
+        <h3>На цей час</h3>
+        <article class="my-statt">
+          <h1>Моя Імя</h1>
+          <h3 class="myName"></h3>
+        </article>
+        <div class="my-statt-container">
+          <h3>Мій Гендер</h3>
+          <p class="myGender"></p>
+          <div>
+            <div>
+              <h3>Мій Ріст</h3>
+              <p class="myHeight"></p>
+            </div>
+            <div>
+              <h3>Моя Вага</h3>
+              <p class="myWeight"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="slider container">
+      <div class="content-for-slider">
+        <ul class="gallery">
+          <li>
+            <img
+              class="image"
+              width="300"
+              height="200"
+              src="/images/fitness.png"
+              alt="зображення"
+            />
+          </li>
+          <li>
+            <img
+              class="image"
+              width="300"
+              height="200"
+              src="/images/fitness.png"
+              alt="зображення"
+            />
+          </li>
+          <li>
+            <img
+              class="image"
+              width="300"
+              height="200"
+              src="/images/fitness.png"
+              alt="зображення"
+            />
+          </li>
+          <li>
+            <img
+              class="image"
+              width="300"
+              height="200"
+              src="/images/fitness.png"
+              alt="зображення"
+            />
+          </li>
+          <li>
+            <img
+              class="image"
+              width="300"
+              height="200"
+              src="/images/fitness.png"
+              alt="зображення"
+            />
+          </li>
+          <li>
+            <img
+              class="image"
+              width="300"
+              height="200"
+              src="/images/fitness.png"
+              alt="зображення"
+            />
+          </li>
+        </ul>
+        <article class="article-button-slider">
+          <button id="next-button">Next</button>
+          <button id="before-button">Before</button>
+        </article>
+      </div>
+    </section>
+    <section class="bg-image"></section>
+    <section id="myQuestion">
+      <div class="qa">
+        <section class="question-section">
+          <button class="question">Чому важливо займатися спортом?</button>
+          <p class="answer">
+            Регулярна фізична активність зміцнює серце, покращує обмін речовин,
+            знижує рівень стресу та підвищує загальний рівень енергії.
+          </p>
+        </section>
+        <section class="question-section">
+          <button class="question">
+            Які види спорту найкращі для схуднення?
+          </button>
+          <p class="answer">
+            Кардіо-навантаження, такі як біг, плавання, велоспорт і стрибки на
+            скакалці, допомагають спалювати калорії та зменшувати зайву вагу.
+          </p>
+        </section>
+        <section class="question-section">
+          <button class="question">
+            Як правильно харчуватися для досягнення спортивних результатів?
+          </button>
+          <p class="answer">
+            Важливо збалансувати білки, жири та вуглеводи, пити достатньо води
+            та уникати шкідливої їжі для підтримки енергії та відновлення
+            м’язів.
+          </p>
+        </section>
+      </div>
+    </section>
+	<section class="more-about-sport">
+		<div class="our-sport container">
+		  <article class="first-block">
+			<h2>Популярні види фітнесу</h2>
+			<p>Обирайте улюблену активність та дізнавайтеся більше про її переваги!</p>
+			<ul>
+			  <li>
+				<button class="btn-fitness">Гантелі</button>
+				<div>
+				  <ul>
+					<li>Зміцнюють м’язи рук</li>
+					<li>Розвивають витривалість</li>
+					<li>Допомагають формувати фігуру</li>
+					<li>Підходять для дому та залу</li>
+					<li>Покращують координацію</li>
+				  </ul>
+				</div>
+			  </li>
+			  <li>
+				<button class="btn-fitness">Біг</button>
+				<div>
+				  <ul>
+					<li>Сприяє спалюванню калорій</li>
+					<li>Зміцнює серцево-судинну систему</li>
+					<li>Покращує настрій</li>
+					<li>Підвищує витривалість</li>
+					<li>Не потребує обладнання</li>
+				  </ul>
+				</div>
+			  </li>
+			  <li>
+				<button class="btn-fitness">Штанги</button>
+				<div>
+				  <ul>
+					<li>Розвивають силу</li>
+					<li>Допомагають нарощувати м’язи</li>
+					<li>Потребують правильної техніки</li>
+					<li>Підходять для пауерліфтингу</li>
+					<li>Допомагають підвищити тестостерон</li>
+				  </ul>
+				</div>
+			  </li>
+			  <li>
+				<button class="btn-fitness">Підтягування</button>
+				<div>
+				  <ul>
+					<li>Зміцнюють спину</li>
+					<li>Розвивають м’язи рук</li>
+					<li>Покращують силу хвата</li>
+					<li>Можна виконувати вдома</li>
+					<li>Не потребують додаткового обладнання</li>
+				  </ul>
+				</div>
+			  </li>
+			  <li>
+				<button class="btn-fitness">Віджимання</button>
+				<div>
+				  <ul>
+					<li>Зміцнюють груди та трицепс</li>
+					<li>Не потребують обладнання</li>
+					<li>Розвивають витривалість</li>
+					<li>Корисні для постави</li>
+					<li>Мають багато варіацій</li>
+				  </ul>
+				</div>
+			  </li>
+			</ul>
+		  </article>
+	  
+		  <article class="second-block">
+			<h2>Фітнес і здоров’я</h2>
+			<p>Регулярні тренування покращують фізичну форму та самопочуття. Оберіть напрямок, який вам подобається!</p>
+	  
+			<div>
+			  <img class="rotate-img" src="/images/fitness.png" alt="Гантелі" />
+			  <h3>Гантелі</h3>
+			  <p>Допомагають зміцнити м’язи рук та покращити загальну фізичну форму.</p>
 			</div>
-		</header>
-		<div class="modal-window-capcha">
-			<div class="modal-capcha">
-				<section class="capcha-body">
-					<h3>ABC</h3>
-					<p>Введіть капчу</p>
-					<textarea name="" id="textareaCapcha"></textarea>
-					<button class="btn-close-capcha">Test</button>
-				</section>
+			<div>
+			  <img class="rotate-img" src="/images/fitness.png" alt="Біг" />
+			  <h3>Біг</h3>
+			  <p>Один з найефективніших способів підтримувати здоров’я серця.</p>
 			</div>
+			<div>
+			  <img class="rotate-img" src="/images/fitness.png" alt="Штанги" />
+			  <h3>Штанги</h3>
+			  <p>Розвивають силу, витривалість і формують м’язову масу.</p>
+			</div>
+			<div>
+			  <img class="rotate-img" src="/images/fitness.png" alt="Підтягування" />
+			  <h3>Підтягування</h3>
+			  <p>Ефективний спосіб зміцнити спину та м’язи рук.</p>
+			</div>
+			<div>
+			  <img class="rotate-img" src="/images/fitness.png" alt="Віджимання" />
+			  <h3>Віджимання</h3>
+			  <p>Ідеальна вправа для м’язів грудей та трицепсу.</p>
+			</div>
+		  </article>
 		</div>
-		<section class="password container">
-			<div class="form-validation">
-					<input
-					id="password-input"
-					type="text"
-					placeholder="Напишіть пароль цифрами"
-					maxlength="6"
-					minlength="6"
-				/><br />
-				<button id="btn-submit">Надіслати</button>
-			</div>
-		</section>
-		<section class="section-about-me container">
-			<div class="about-content">
-				<img src="/images/account.webp" height="300" width="300" />
-				<h3 class="about-me" id="nameUser">Ім'я</h3>
-				<h3 class="about-me" id="genderUser">Гендер</h3>
-				<h3 class="about-me" id="heightUser">Ріст</h3>
-				<h3 class="about-me" id="weightUser">Вага</h3>
-			</div>
-			<div class="input-container">
-				<form action="">
-					<input
-						class="input-about-me"
-						id="nameUserInput"
-						type="text"
-						placeholder="Введіть імя"
-					/>
-					<input
-						class="input-about-me"
-						id="genderUserInput"
-						type="text"
-						placeholder="Введіть гендер"
-					/>
-					<input
-						class="input-about-me"
-						id="heightUserInput"
-						type="text"
-						placeholder="Введіть ріст"
-					/>
-					<input
-						class="input-about-me"
-						id="weightUserInput"
-						type="text"
-						placeholder="Введіть вагу"
-					/>
-				</form>
-				<button class="save">Save</button>
-				<article class="regulations">
-					<button id="btnOpenP">правила</button>
-					<p id="openText">Впишіть інформацію про ріст в сантиметрах.</p>
-				</article>
-			</div>
-		</section>
-		<section class="title-container">
-			<div class="title-text">
-				<article>
-					<h1 class="title_section">Дізнайтесь свої результати</h1>
-					<h3 class="headline_title">
-						Не засмучувайтемь ні в якому разі а працюйте над собою
-					</h3>
-					<button id="btn_open" class="btn_text-open">Детальніше</button>
-					<p id="open-text" class="open_text"></p>
-				</article>
-			</div>
-		</section>
-		<section class="bg-image"></section>
-		<section class="card-container"></section>
-		<section class="eat-container" id="eat-container"></section>
-		<section class="modal-window-section container">
-			<button class="open-modal-window">Відкрити</button>
-			<div class="modal-window">
-				<img class="img-window" src="/images/logo.svg" />
-				<h3 class="modal-window-text">
-					Наш сайт допоможе вам підібрати ідеальний режим тренувань і
-					харчування.
-				</h3>
-				<button class="close-modal-button">Закрити</button>
-			</div>
-		</section>
-		<section class="more-information container">
-			<div class="first-container">
-				<button class="btn-event" id="btn-event">click</button>
-				<div class="dropdown-container active">
-					<img src="/images/fitness.png" />
-					<br />
-					<a href="#" class="text-language">
-						Калорії це лічильник ваги 4 калорії це один грам</a>
-				</div>
-			</div>
-			<div class="second-container">
-				<img src="/images/cal.jfif" class="img-information" />
-			</div>
-		</section>
-		<section class="bg-image"></section>
-		<section class="my-account">
-			<div class="my-content">
-				<h1>Мої стати</h1>
-				<h3>На цей час</h3>
-				<article class="my-statt">
-					<h1>Моя Імя</h1>
-					<h3 class="myName"></h3>
-				</article>
-				<div class="my-statt-container">
-					<h3>Мій Гендер</h3>
-					<p class="myGender"></p>
-					<div>
-						<div>
-							<h3>Мій Ріст</h3>
-							<p class="myHeight"></p>
-						</div>
-						<div>
-							<h3>Моя Вага</h3>
-							<p class="myWeight"></p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="slider container">
-			<div class="content-for-slider">
-				<ul class="gallery">
-					<li>
-						<img
-							class="image"
-							width="300"
-							height="200"
-							src="/images/fitness.png"
-							alt="зображення"
-						/>
-					</li>
-					<li>
-						<img
-							class="image"
-							width="300"
-							height="200"
-							src="/images/fitness.png"
-							alt="зображення"
-						/>
-					</li>
-					<li>
-						<img
-							class="image"
-							width="300"
-							height="200"
-							src="/images/fitness.png"
-							alt="зображення"
-						/>
-					</li>
-					<li>
-						<img
-							class="image"
-							width="300"
-							height="200"
-							src="/images/fitness.png"
-							alt="зображення"
-						/>
-					</li>
-					<li>
-						<img
-							class="image"
-							width="300"
-							height="200"
-							src="/images/fitness.png"
-							alt="зображення"
-						/>
-					</li>
-					<li>
-						<img
-							class="image"
-							width="300"
-							height="200"
-							src="/images/fitness.png"
-							alt="зображення"
-						/>
-					</li>
-				</ul>
-				<article class="article-button-slider">
-					<button id="next-button">Next</button>
-					<button id="before-button">Before</button>
-				</article>
-			</div>
-		</section>
-		<section class="bg-image"></section>
-		<section id="myQuestion">
-			<div class="qa">
-				<section class="question-section">
-					<button class="question">Lorem, ipsum dolor.</button>
-					<p class="answer">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
-						illum ducimus accusantium accusamus corporis pariatur maxime eius
-						adipisci veritatis at?
-					</p>
-				</section>
-				<section class="question-section">
-					<button class="question">Lorem, ipsum dolor.</button>
-					<p class="answer">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
-						illum ducimus accusantium accusamus corporis pariatur maxime eius
-						adipisci veritatis at?
-					</p>
-				</section>
-				<section class="question-section">
-					<button class="question">Lorem, ipsum dolor.</button>
-					<p class="answer">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
-						illum ducimus accusantium accusamus corporis pariatur maxime eius
-						adipisci veritatis at?
-					</p>
-				</section>
-			</div>
-		</section>
-		<footer class="container">
-			<div class="footer-content">
-				<header>
-					<img src="/images/fitness.png" />
-					<h3>Змінюй себе разом з нами!</h3>
-				</header>
+	  </section>	  
+    <footer class="container">
+      <div class="footer-content">
+        <header>
+          <img src="/images/fitness.png" />
+          <h3>Змінюй себе разом з нами!</h3>
+        </header>
 
-				<nav class="footer-main-nav">
-					<ul>
-						<li><a href="#">Поради тренерів</a></li>
-						<li><a href="#">Правильне харчування</a></li>
-						<li><a href="#">Мотивація</a></li>
-						<li><a href="#">Історії успіху</a></li>
-					</ul>
-				</nav>
+        <nav class="footer-main-nav">
+          <ul>
+            <li><a href="#">Поради тренерів</a></li>
+            <li><a href="#">Правильне харчування</a></li>
+            <li><a href="#">Мотивація</a></li>
+            <li><a href="#">Історії успіху</a></li>
+          </ul>
+        </nav>
 
-				<section class="about-company">
-					<button class="btn-click-footer">Дізнатися більше</button>
-					<p class="headline_footer">
-						Долучайтеся до нашої спільноти та змінюйте своє життя вже сьогодні!
-					</p>
-				</section>
+        <section class="about-company">
+          <button class="btn-click-footer">Дізнатися більше</button>
+          <p class="headline_footer">
+            Долучайтеся до нашої спільноти та змінюйте своє життя вже сьогодні!
+          </p>
+        </section>
 
-				<div class="socials">
-					<img
-						src="/images/fitness.png"
-						alt="Facebook"
-						height="50"
-						width="50"
-					/>
-					<img
-						src="/images/fitness.png"
-						alt="Instagram"
-						height="50"
-						width="50"
-					/>
-					<img src="/images/fitness.png" alt="Twitter" height="50" width="50" />
-					<img src="/images/fitness.png" alt="YouTube" height="50" width="50" />
-				</div>
-			</div>
-		</footer>
-		<script type="module" src="src/js/app.js"></script>
-	</body>
+        <div class="socials">
+          <img
+            src="/images/fitness.png"
+            alt="Facebook"
+            height="50"
+            width="50"
+          />
+          <img
+            src="/images/fitness.png"
+            alt="Instagram"
+            height="50"
+            width="50"
+          />
+          <img src="/images/fitness.png" alt="Twitter" height="50" width="50" />
+          <img src="/images/fitness.png" alt="YouTube" height="50" width="50" />
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="src/js/app.js"></script>
+  </body>
 </html>

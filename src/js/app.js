@@ -30,7 +30,7 @@ let firstUserWeight = document.getElementById("firstUserWeight");
 function pluseText(element, text) {
   element.addEventListener("input", () => {
     text.textContent = element.value;
-    console.log(text);
+    console.log(`Це ваші данні ${text.textContent}`);
   });
 }
 
@@ -392,11 +392,19 @@ btnOpenResult.addEventListener("click", () => {
   }
 });
 class User {
-  constructor(name, gender, height, weight) {
-    this.name = name;
+  constructor(gender, height, weight) {
+    // this.name = name;
     this.gender = gender;
     this.height = height;
     this.weight = weight;
+  }
+  set userName(value) {
+    const firstLatter = value[0].toUpperCase()
+    const fromSecondLetter = value.slice(1).toLowerCase()
+    this._userName = `${firstLatter}${fromSecondLetter}`
+  }
+  get userName() {
+    return this._userName
   }
 }
 const myNameStatt = document.querySelector(".myName");
@@ -407,12 +415,12 @@ const save = document.querySelector(".save");
 
 save.addEventListener("click", () => {
   const You = new User(
-    userNameInput.value,
     genderUserInput.value,
     heightUserInput.value,
     weightUserInput.value
   );
-  myNameStatt.textContent = You.name;
+  You.userName = userNameInput.value
+  myNameStatt.textContent = You.userName;
   myGenderStatt.textContent = You.gender;
   myHeightStatt.textContent = You.height;
   myWeightStatt.textContent = You.weight;
@@ -507,11 +515,28 @@ document.addEventListener("DOMContentLoaded", () => {
   modalWindowCapcha.style.position = "flex";
 
   btnCloseCapcha.addEventListener("click", () => {
-    if (textCapcha.value.trim() === "ABC") {
+    if (textCapcha.value.trim() === '336') {
       modalWindowCapcha.style.display = "none";
       modalWindowCapcha.classList.remove("active");
     } else {
       alert("Введіть капчу правильно, якщо ви не робот");
+    }
+  });
+});
+
+const btns = document.querySelectorAll('.btn-fitness');
+
+btns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const containerFitness = btn.nextElementSibling;
+    if (containerFitness.style.display === 'none') {
+      setTimeout(() => {
+        containerFitness.style.display = 'block';
+      }, 400);
+    } else {
+      setTimeout(() => {
+        containerFitness.style.display = 'none';
+      }, 400);
     }
   });
 });

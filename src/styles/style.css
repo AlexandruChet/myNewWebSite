@@ -1016,20 +1016,147 @@ footer .footer-content .socials img:hover {
   box-shadow: rgba(253, 76, 0, 0.5) 0 3px 8px;
 }
 
+.more-about-sport {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  padding: 5vw 0;
+  background-color: #222;
+}
+.more-about-sport .our-sport {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5vw;
+  justify-content: center;
+}
+.more-about-sport .our-sport .first-block {
+  margin-left: 5vw;
+}
+.more-about-sport .our-sport .first-block h2 {
+  font-size: 20px;
+  color: white;
+}
+.more-about-sport .our-sport .first-block p {
+  color: white;
+  padding-bottom: 3vw;
+}
+.more-about-sport .our-sport .first-block ul {
+  list-style: none;
+  padding: 0;
+}
+.more-about-sport .our-sport .first-block ul li {
+  margin-bottom: 1vw;
+}
+.more-about-sport .our-sport .first-block ul li button {
+  border-radius: 10px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #fff;
+  border: none;
+  box-sizing: border-box;
+  color: #000;
+  cursor: pointer;
+  font-family: Clarkson, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 1.5em 2.2em;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+.more-about-sport .our-sport .first-block ul li button:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ebebeb;
+  -webkit-clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
+          clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
+  transition: -webkit-clip-path 0.5s ease-in-out;
+  transition: clip-path 0.5s ease-in-out;
+  transition: clip-path 0.5s ease-in-out, -webkit-clip-path 0.5s ease-in-out;
+}
+.more-about-sport .our-sport .first-block ul li button:hover:before {
+  -webkit-clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
+          clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
+}
+.more-about-sport .our-sport .first-block ul li div {
+  display: none;
+  margin: 1vw 0;
+  padding: 1vw;
+  color: white;
+  border-radius: 10px;
+  border: 1.5px solid #fff;
+  text-align: center;
+  background-color: #0e0e0e;
+  font-family: "Gill Sans", Calibri, sans-serif;
+  font-size: 18px;
+  transition: all 0.25s;
+}
+.more-about-sport .our-sport .first-block ul li div:hover {
+  margin-bottom: 3vw;
+  background-color: white;
+  color: black;
+  border: 5px solid #000;
+  box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+}
+.more-about-sport .our-sport .second-block {
+  color: white;
+  text-align: center;
+}
+.more-about-sport .our-sport .second-block div {
+  width: 20vw;
+  margin-top: 3vw;
+}
+.more-about-sport .our-sport .second-block div .rotate-img {
+  width: 10vw;
+  height: 10vw;
+  margin-top: 1vw;
+  border-radius: 50%;
+  transition: transform 0.8s ease-in-out;
+}
+.more-about-sport .our-sport .second-block div .rotate-img:hover {
+  transform: rotate(360deg);
+}
 @media (max-width: 768px) {
-  header .header-main {
+  .more-about-sport header .header-main {
     display: block;
   }
-  header .header-main .navigation {
+  .more-about-sport header .header-main .navigation {
     display: none;
     flex-direction: column;
     align-items: center;
   }
-  header .header-main .navigation .header-icons .logo {
+  .more-about-sport header .header-main .navigation .header-icons .logo {
     margin-top: 2vw;
     font-size: 1.3rem;
   }
+  .more-about-sport .our-sport {
+    flex-direction: column;
+    align-items: center;
+    gap: 3vw;
+  }
+  .more-about-sport .first-block {
+    margin-left: 0;
+    width: 90%;
+  }
+  .more-about-sport .second-block {
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    margin-left: 5vw;
+  }
+  .more-about-sport .second-block div .rotate-img {
+    width: 90vw;
+    height: 20vw;
+    margin-top: 1vw;
+    border-radius: 1%;
+    transition: none;
+  }
 }
+
 @media (max-width: 650px) {
   .eat-container {
     gap: 16px;
