@@ -399,12 +399,12 @@ class User {
     this.weight = weight;
   }
   set userName(value) {
-    const firstLatter = value[0].toUpperCase()
-    const fromSecondLetter = value.slice(1).toLowerCase()
-    this._userName = `${firstLatter}${fromSecondLetter}`
+    const firstLatter = value[0].toUpperCase();
+    const fromSecondLetter = value.slice(1).toLowerCase();
+    this._userName = `${firstLatter}${fromSecondLetter}`;
   }
   get userName() {
-    return this._userName
+    return this._userName;
   }
 }
 const myNameStatt = document.querySelector(".myName");
@@ -419,7 +419,7 @@ save.addEventListener("click", () => {
     heightUserInput.value,
     weightUserInput.value
   );
-  You.userName = userNameInput.value
+  You.userName = userNameInput.value;
   myNameStatt.textContent = You.userName;
   myGenderStatt.textContent = You.gender;
   myHeightStatt.textContent = You.height;
@@ -515,7 +515,7 @@ document.addEventListener("DOMContentLoaded", () => {
   modalWindowCapcha.style.position = "flex";
 
   btnCloseCapcha.addEventListener("click", () => {
-    if (textCapcha.value.trim() === '336') {
+    if (textCapcha.value.trim() === "336") {
       modalWindowCapcha.style.display = "none";
       modalWindowCapcha.classList.remove("active");
     } else {
@@ -524,19 +524,43 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-const btns = document.querySelectorAll('.btn-fitness');
+const btns = document.querySelectorAll(".btn-fitness");
 
-btns.forEach(btn => {
-  btn.addEventListener('click', () => {
+btns.forEach((btn) => {
+  btn.addEventListener("click", () => {
     const containerFitness = btn.nextElementSibling;
-    if (containerFitness.style.display === 'none') {
+    if (containerFitness.style.display === "none") {
       setTimeout(() => {
-        containerFitness.style.display = 'block';
+        containerFitness.style.display = "block";
       }, 400);
     } else {
       setTimeout(() => {
-        containerFitness.style.display = 'none';
+        containerFitness.style.display = "none";
       }, 400);
     }
   });
+});
+
+const btnClickGame = document.getElementById("click-btn");
+const clickerText = document.getElementById("click-message");
+const muscleImg = document.getElementById("muscle-img");
+let count = 0;
+
+btnClickGame.addEventListener("click", () => {
+  count++;
+  clickerText.textContent = count;
+
+  if (count === 1) {
+    muscleImg.src = "/images/fitess-run.jpg";
+  } else if (count === 7) {
+    muscleImg.src = "/images/img-fitness-strong.jfif";
+  } else if (count === 30) {
+    muscleImg.src = "/images/fitness-muscle.avif";
+  } else if (count === 50) {
+    muscleImg.src = "/images/muscle.jpg";
+  } else if (count === 80) {
+    muscleImg.src = "/images/body-muscle.jfif";
+  } else if (count === 100) {
+    muscleImg.src = "/images/arnold.jfif";
+  }
 });

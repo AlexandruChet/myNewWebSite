@@ -1103,10 +1103,16 @@ footer .footer-content .socials img:hover {
   box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
 }
 .more-about-sport .our-sport .second-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   color: white;
   text-align: center;
 }
 .more-about-sport .our-sport .second-block div {
+  align-items: center;
+  justify-content: center;
   width: 20vw;
   margin-top: 3vw;
 }
@@ -1118,7 +1124,7 @@ footer .footer-content .socials img:hover {
   transition: transform 0.8s ease-in-out;
 }
 .more-about-sport .our-sport .second-block div .rotate-img:hover {
-  transform: rotate(360deg);
+  transform: rotate(1080deg);
 }
 @media (max-width: 768px) {
   .more-about-sport header .header-main {
@@ -1155,6 +1161,66 @@ footer .footer-content .socials img:hover {
     border-radius: 1%;
     transition: none;
   }
+}
+
+.clicker-muscle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #ffebcd, #ffcc80);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding-bottom: 5vw;
+  padding-top: 5vw;
+}
+.clicker-muscle .clicker-container {
+  text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+.clicker-muscle .clicker-container h3 {
+  font-size: 24px;
+  color: #444;
+}
+.clicker-muscle .clicker-container p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 15px;
+}
+.clicker-muscle .clicker-container img {
+  width: 50vw;
+  height: 25vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease, object-position 0.3s ease, border-radius 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, object-position 0.3s ease, border-radius 0.3s ease, box-shadow 0.3s ease, -o-object-position 0.3s ease;
+  -o-object-position: top;
+     object-position: top;
+}
+.clicker-muscle .clicker-container img:hover {
+  -o-object-position: center;
+     object-position: center;
+  transform: scale(1.05);
+  border-radius: 3vw;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+.clicker-muscle .clicker-container button {
+  padding: 1vw 2vw;
+  font-size: 16px;
+  background: #ff9800;
+  color: white;
+  border: none;
+  border-radius: 1vw;
+  cursor: pointer;
+  width: 30vw;
+  margin-top: 2vw;
+  transition: background 0.3s ease;
+}
+.clicker-muscle .clicker-container button:hover {
+  background: #e68900;
+  font-family: monospace;
 }
 
 @media (max-width: 650px) {
