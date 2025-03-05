@@ -526,9 +526,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const btns = document.querySelectorAll(".btn-fitness");
 
-btns.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    const containerFitness = btn.nextElementSibling;
+btns.forEach((element) => {
+  element.addEventListener("click", () => {
+    const containerFitness = element.nextElementSibling;
     if (containerFitness.style.display === "none") {
       setTimeout(() => {
         containerFitness.style.display = "block";
