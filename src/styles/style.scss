@@ -2,8 +2,22 @@ html {
   scroll-behavior: smooth;
 }
 
+$dark: #222;
+$white: white;
+$light-gray: #ccc;
+
+@mixin text{
+  font-weight: bold;
+  color: $white;
+  font-size: 1.2rem;
+}
+
 img {
   object-fit: cover;
+}
+
+li{
+  list-style-type: none;
 }
 
 .container {
@@ -46,7 +60,7 @@ header {
       width: 3vw;
       height: 0.3vw;
       border-radius: 5px;
-      background-color: white;
+      background-color: $white;
       transition: all 0.3s ease;
     }
 
@@ -93,7 +107,7 @@ header {
         display: flex;
         align-items: center;
         padding-left: 5vw;
-        color: white;
+        color: $white;
         gap: 3vw;
 
         .logo {
@@ -126,8 +140,7 @@ header {
           font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
             sans-serif;
           margin-left: 1vw;
-          font-size: 1.5rem;
-          color: white;
+          @include text
         }
       }
     }
@@ -143,7 +156,7 @@ header {
   align-items: center;
   .form-validation {
     text-align: center;
-    background-color: #eafdff;
+    background-color: $light-gray;
     padding: 3vw 10vw;
     border-radius: 2vw;
     box-shadow: rgba(240, 46, 170, 0.4) -5px 5px,
@@ -158,9 +171,9 @@ header {
       font-weight: 400;
       line-height: 1.5;
       color: #212529;
-      background-color: #fff;
+      background-color: $white;
       background-clip: padding-box;
-      border: 1px solid #bdbdbd;
+      border: 1px solid $light-gray;
       border-radius: 0.25rem;
       box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
         rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
@@ -173,9 +186,9 @@ header {
       background-image: none;
       border: 1px solid #000;
       border-radius: 4px;
-      box-shadow: #fff 4px 4px 0 0, #000 4px 4px 0 1px;
+      box-shadow: $white 4px 4px 0 0, #000 4px 4px 0 1px;
       box-sizing: border-box;
-      color: #fff;
+      color: $white;
       cursor: pointer;
       display: inline-block;
       font-family: ITCAvantGardeStd-Bk, Arial, sans-serif;
@@ -208,7 +221,7 @@ header {
     }
 
     #btn-submit:not([disabled]):active {
-      box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+      box-shadow: $white 2px 2px 0 0, #000 2px 2px 0 1px;
       transform: translate(2px, 2px);
     }
   }
@@ -235,7 +248,7 @@ header {
       margin-top: 5vw;
       font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
         sans-serif;
-      color: white;
+      color: $white;
       font-size: 4vw;
     }
   }
@@ -262,7 +275,7 @@ header {
       }
     }
     .save {
-      background-color: #c2fbd7;
+      background-color: $light-gray;
       border-radius: 100px;
       box-shadow: rgba(44, 187, 99, 0.2) 0 -25px 18px -14px inset,
         rgba(44, 187, 99, 0.15) 0 1px 2px, rgba(44, 187, 99, 0.15) 0 2px 4px,
@@ -304,7 +317,7 @@ header {
         border: none;
         box-shadow: none;
         box-sizing: border-box;
-        color: #ffffff;
+        color: $white;
         cursor: pointer;
         display: inline-flex;
         font-family: CircularStd, sans-serif;
@@ -362,7 +375,7 @@ header {
 
   .title-text {
     text-align: center;
-    background: #fff;
+    background: $white;
     padding: 30px;
     border-radius: 15px;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
@@ -371,20 +384,20 @@ header {
 
     .title_section {
       font-size: 32px;
-      color: #222;
+      color: $dark;
       margin-bottom: 10px;
     }
 
     .headline_title {
       font-size: 24px;
-      color: #444;
+      color: $dark;
       margin-bottom: 15px;
     }
 
     .btn_text-open {
       padding: 10px 20px;
       font-size: 16px;
-      color: #fff;
+      color: $white;
       background: #ff0080;
       border: none;
       border-radius: 5px;
@@ -451,11 +464,11 @@ header {
       }
     }
     p {
-      color: white;
+      color: $white;
     }
     button {
       appearance: none;
-      background-color: white;
+      background-color: $white;
       border: 2px solid #1a1a1a;
       border-radius: 15px;
       box-sizing: border-box;
@@ -488,8 +501,8 @@ header {
     }
 
     button:hover {
-      border: 2px solid #fff;
-      color: #fff;
+      border: 2px solid $white;
+      color: $white;
       background-color: #1a1a1a;
       box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
       transform: translateY(-2px);
@@ -520,7 +533,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #ffffff;
+    background-color: $white;
     border-radius: 24px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     padding: 16px;
@@ -544,7 +557,7 @@ header {
     h3 {
       font-size: 22px;
       font-weight: bold;
-      color: #222;
+      color: $dark;
       margin-bottom: 8px;
     }
 
@@ -559,7 +572,7 @@ header {
       font-size: 1rem;
       font-weight: bold;
       background-color: #7aff22;
-      color: #fff;
+      color: $white;
       border: none;
       border-radius: 12px;
       cursor: pointer;
@@ -582,7 +595,7 @@ header {
 
   .open-modal-window {
     font-size: 2rem;
-    color: #ffffff;
+    color: $white;
     padding: 1rem 2rem;
     border-radius: 1rem;
     background-color: #007bff;
@@ -590,7 +603,7 @@ header {
 
   .modal-window {
     display: none;
-    background-color: white;
+    background-color: $white;
     border-radius: 2vw;
     margin-top: 5vw;
     text-align: center;
@@ -622,7 +635,7 @@ header {
     border-radius: 2vw;
     margin-bottom: 1vw;
     font-size: 2vw;
-    color: white;
+    color: $white;
     margin-top: 1vw;
     background-color: red;
     width: 10vw;
@@ -648,7 +661,7 @@ header {
       margin-bottom: 3vw;
       padding-left: 25vw;
       appearance: none;
-      background-color: white;
+      background-color: $white;
       border: 2px solid #1a1a1a;
       border-radius: 15px;
       box-sizing: border-box;
@@ -663,7 +676,7 @@ header {
       transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
       width: 100%;
       &:hover {
-        color: #fff;
+        color: $white;
         background-color: #1a1a1a;
         box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
         transform: translateY(-2px);
@@ -682,7 +695,7 @@ header {
       .text-language {
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         color: #1a1a1a;
-        font-size: 1.5vw;
+        font-size: 2.5vw;
       }
 
       &.active {
@@ -708,7 +721,7 @@ header {
 }
 
 .my-account {
-  color: #fff;
+  color: $white;
   padding: 40px;
   background-color: #1a1a1a;
   font-family: "Fira Code", monospace;
@@ -763,13 +776,13 @@ header {
       font-size: 16px;
     }
 
-    > div {
+     div {
       display: flex;
       justify-content: space-between;
       gap: 20px;
       margin-top: 20px;
 
-      > div {
+       div {
         flex: 1;
         padding: 15px;
         background-color: #848484;
@@ -796,7 +809,7 @@ header {
 }
 
 .slider {
-  background-color: #222;
+  background-color: $dark;
   .content-for-slider {
     background-color: #1a1a1a;
     padding: 2vw;
@@ -823,7 +836,7 @@ header {
     }
     .article-button-slider button {
       align-items: center;
-      background-color: #ffffff;
+      background-color: $white;
       border: 1px solid rgba(0, 0, 0, 0.1);
       border-radius: 0.25rem;
       box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
@@ -883,7 +896,7 @@ header {
     .question {
       width: 100%;
       background-color: #1e1e2e;
-      color: #fff;
+      color: $white;
       padding: 15px;
       margin: 10px 0;
       border-radius: 8px;
@@ -950,7 +963,7 @@ header {
 
 footer {
   background: #1a1a1a;
-  color: white;
+  color: $white;
   padding: 2rem 0;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
@@ -990,7 +1003,8 @@ footer {
           margin-bottom: 0.5rem;
 
           a {
-            color: white;
+            color: $white;
+            @include text;
             text-decoration: none;
             transition: color 0.3s;
 
@@ -1019,9 +1033,10 @@ footer {
 
       .headline_footer {
         display: none;
-        font-size: 0.9rem;
+        @include text;
         opacity: 0.8;
         margin-top: 0.5rem;
+
       }
     }
 
@@ -1043,6 +1058,7 @@ footer {
 }
 
 .modal-window-capcha {
+  z-index: 1000;
   font-family: fantasy;
   position: fixed;
   top: 0;
@@ -1063,7 +1079,7 @@ footer {
   }
 
   .modal-capcha {
-    background: #fff;
+    background: $white;
     padding-right: 5%;
     padding: 20px;
     border-radius: 8px;
@@ -1084,9 +1100,9 @@ footer {
     }
 
     textarea {
-      width: 100%;
+      width: 90%;
       height: 50px;
-      border: 1px solid #ccc;
+      border: 1px solid $light-gray;
       border-radius: 4px;
       padding: 8px;
       font-size: 16px;
@@ -1097,7 +1113,7 @@ footer {
       background-image: linear-gradient(-180deg, #ff7e31, #e62c03);
       border-radius: 6px;
       box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
-      color: #ffffff;
+      color: $white;
       cursor: pointer;
       display: inline-block;
       font-family: Inter, -apple-system, system-ui, Roboto, "Helvetica Neue",
@@ -1131,7 +1147,7 @@ footer {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   padding: 5vw 0;
-  background-color: #222;
+  background-color: $dark;
 
   .our-sport {
     display: flex;
@@ -1143,10 +1159,10 @@ footer {
       margin-left: 5vw;
       h2 {
         font-size: 20px;
-        color: white;
+        @include text;
       }
       p {
-        color: white;
+        @include text;
         padding-bottom: 3vw;
       }
 
@@ -1160,7 +1176,7 @@ footer {
           button {
             border-radius: 10px;
             appearance: none;
-            background-color: #fff;
+            background-color: $white;
             border: none;
             box-sizing: border-box;
             color: #000;
@@ -1195,9 +1211,9 @@ footer {
             display: none;
             margin: 1vw 0;
             padding: 1vw;
-            color: white;
+            color: $white;
             border-radius: 10px;
-            border: 1.5px solid #fff;
+            border: 1.5px solid $white;
             text-align: center;
             background-color: #0e0e0e;
             font-family: "Gill Sans", Calibri, sans-serif;
@@ -1206,7 +1222,7 @@ footer {
 
             &:hover {
               margin-bottom: 3vw;
-              background-color: white;
+              background-color: $white;
               color: black;
               border: 5px solid #000;
               box-shadow: rgba(240, 46, 170, 0.4) 5px 5px,
@@ -1225,14 +1241,14 @@ footer {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      color: white;
+      color: $white;
       text-align: center;
 
       div {
         align-items: center;
         justify-content: center;
         width: 20vw;
-        margin-top: 3vw;
+        margin-top: 57px;
 
         .rotate-img {
           width: 10vw;
@@ -1260,7 +1276,7 @@ footer {
   padding-top: 5vw;
   .clicker-container {
     text-align: center;
-    background: white;
+    background: $white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
@@ -1294,7 +1310,7 @@ footer {
       padding: 1vw 2vw;
       font-size: 16px;
       background: #ff9800;
-      color: white;
+      color: $white;
       border: none;
       border-radius: 1vw;
       cursor: pointer;
@@ -1346,10 +1362,9 @@ footer {
     div {
       .rotate-img {
         margin-top: 100px;
-        margin-bottom: 100px;
         scale: 2;
         margin-top: 1vw;
-        border-radius: 3px solid white;
+        border-radius: 3px solid $white;
       }
     }
   }
@@ -1447,5 +1462,13 @@ footer {
     width: 30vw;
     height: 30vw;
     margin-top: 1vw;
+  }
+  #btn-event{
+    width: 100px;
+    height: 10px;
+    font-size: 10px;
+  }
+  .bg-image{
+    height: 40vw;
   }
 }

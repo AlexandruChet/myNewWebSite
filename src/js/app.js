@@ -54,6 +54,7 @@ btnOpenP.addEventListener("click", () => {
     openTextRegulations.style.display = "none";
   }
 });
+
 const btnOpenResult = document.getElementById("btn_open");
 const innerText = document.getElementById("open-text");
 const cardContainerContent = document.querySelector(".card-container");
@@ -393,7 +394,6 @@ btnOpenResult.addEventListener("click", () => {
 });
 class User {
   constructor(gender, height, weight) {
-    // this.name = name;
     this.gender = gender;
     this.height = height;
     this.weight = weight;
@@ -407,6 +407,7 @@ class User {
     return this._userName;
   }
 }
+
 const myNameStatt = document.querySelector(".myName");
 const myGenderStatt = document.querySelector(".myGender");
 const myHeightStatt = document.querySelector(".myHeight");
