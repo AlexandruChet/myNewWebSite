@@ -1,0 +1,19 @@
+{
+  "name": "mynewwebsite",
+  "version": "1.0.0",
+  "description": "> ### На цьому сайті в мові розмітки HTML (Hyper Text Language) складається з стандартноі розмітки з ванільною структурою",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexandruchet/myNewWebSite.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexandruchet/myNewWebSite/issues"
+  },
+  "homepage": "https://github.com/alexandruchet/myNewWebSite#readme"
+}
